@@ -1,0 +1,569 @@
+,noc_s2006_code,noc_s2006_title,noc_s2006_status,noc_2011_p,noc_2011_code,noc_2011_title,noc_2011_notes
+6,A011,Legislators,NU, ,0011,Legislators, 
+7,A011,Legislators,NU,*,0012,Senior government managers and officials,Territorial commissioners
+8,A012,Senior government managers and officials,NU,*,0012,Senior government managers and officials,Except territorial commissioners
+9,A013,"Senior managers - financial, communications and other business services",NC, ,0013,"Senior managers - financial, communications and other business services", 
+10,A014,"Senior managers - health, education, social and community services and membership organizations",NU,*,0014,"Senior managers - health, education, social and community services and membership organizations",Except hockey association general managers and automobile association executive directors
+11,A015,"Senior managers - trade, broadcasting and other services, n.e.c.",NU,*,0014,"Senior managers - health, education, social and community services and membership organizations",Hockey association general managers and automobile association executive directors
+12,A015,"Senior managers - trade, broadcasting and other services, n.e.c.",NU, ,0015,"Senior managers - trade, broadcasting and other services, n.e.c.", 
+13,A016,"Senior managers - goods production, utilities, transportation and construction",NC/T, ,0016,"Senior managers - construction, transportation, production and utilities", 
+19,A111,Financial managers,NC, ,0111,Financial managers, 
+20,A112,Human resources managers,NC, ,0112,Human resources managers, 
+21,A113,Purchasing managers,NC, ,0113,Purchasing managers, 
+22,A114,Other administrative services managers,NC, ,0114,Other administrative services managers, 
+24,A121,Engineering managers,NC, ,0211,Engineering managers, 
+25,A122,Computer and information systems managers,NC, ,0213,Computer and information systems managers, 
+26,A123,Architecture and science managers,NC, ,0212,Architecture and science managers, 
+31,A131,"Sales, marketing and advertising managers",NU,*,0124,"Advertising, marketing and public relations managers",Except advertising agency managers and advertising and marketing managers in retail trade
+32,A131,"Sales, marketing and advertising managers",NU,*,0601,Corporate sales managers,Except corporate sales managers in retail trade
+33,A131,"Sales, marketing and advertising managers",NU,*,0621,Retail and wholesale trade managers,Wholesale trade managers
+34,A131,"Sales, marketing and advertising managers",NU,*,1123,"Professional occupations in advertising, marketing and public relations",Advertising account managers
+37,A141,Facility operation and maintenance managers,NU, ,0714,Facility operation and maintenance managers, 
+38,A141,Facility operation and maintenance managers,NU,*,0731,Managers in transportation,Distribution services managers
+41,A211,Retail trade managers,NU,*,0124,"Advertising, marketing and public relations managers",Advertising and marketing managers in retail trade
+42,A211,Retail trade managers,NU,*,0601,Corporate sales managers,Corporate sales managers in retail trade
+43,A211,Retail trade managers,NU,*,0621,Retail and wholesale trade managers,Retail trade managers
+45,A221,Restaurant and food service managers,NC, ,0631,Restaurant and food service managers, 
+46,A222,Accommodation service managers,NC, ,0632,Accommodation service managers, 
+51,A301,"Insurance, real estate and financial brokerage managers",NC, ,0121,"Insurance, real estate and financial brokerage managers", 
+52,A302,"Banking, credit and other investment managers",NC, ,0122,"Banking, credit and other investment managers", 
+53,A303,Other business services managers,NU,*,0124,"Advertising, marketing and public relations managers",Advertising agency managers
+54,A303,Other business services managers,NU, ,0125,Other business services managers, 
+56,A311,Telecommunication carriers managers,NC, ,0131,Telecommunication carriers managers, 
+57,A312,Postal and courier services managers,NC, ,0132,Postal and courier services managers, 
+60,A321,Managers in health care,NC, ,0311,Managers in health care, 
+61,A322,Administrators - post-secondary education and vocational training,NC, ,0421,Administrators - post-secondary education and vocational training, 
+62,A323,School principals and administrators of elementary and secondary education,NC, ,0422,School principals and administrators of elementary and secondary education, 
+63,A324,"Managers in social, community and correctional services",NC, ,0423,"Managers in social, community and correctional services", 
+65,A331,Government managers - health and social policy development and program administration,NC, ,0411,Government managers - health and social policy development and program administration, 
+66,A332,"Government managers - economic analysis, policy development and program administration",NC, ,0412,"Government managers - economic analysis, policy development and program administration", 
+67,A333,Government managers - education policy development and program administration,NC, ,0413,Government managers - education policy development and program administration, 
+68,A334,Other managers in public administration,NC, ,0414,Other managers in public administration, 
+70,A341,"Library, archive, museum and art gallery managers",NC, ,0511,"Library, archive, museum and art gallery managers", 
+71,A342,"Managers - publishing, motion pictures, broadcasting and performing arts",NC, ,0512,"Managers - publishing, motion pictures, broadcasting and performing arts", 
+72,A343,"Recreation, sports and fitness program and service directors",NC, ,0513,"Recreation, sports and fitness program and service directors", 
+74,A351,Commissioned police officers,NC, ,0431,Commissioned police officers, 
+75,A352,Fire chiefs and senior firefighting officers,NC, ,0432,Fire chiefs and senior firefighting officers, 
+76,A353,"Commissioned officers, armed forces",NC/T, ,0433,Commissioned officers of the Canadian Forces, 
+78,A361,Other services managers,NC/T, ,0651,"Managers in customer and personal services, n.e.c.", 
+81,A371,Construction managers,NC, ,0711,Construction managers, 
+82,A372,Residential home builders and renovators,NC/T, ,0712,Home building and renovation managers, 
+83,A373,Transportation managers,NU,*,0731,Managers in transportation,Except distribution services managers
+85,A381,Primary production managers (except agriculture),NC/T, ,0811,Managers in natural resources production and fishing, 
+87,A391,Manufacturing managers,NC, ,0911,Manufacturing managers, 
+88,A392,Utilities managers,NC, ,0912,Utilities managers, 
+93,B011,Financial auditors and accountants,NC, ,1111,Financial auditors and accountants, 
+94,B012,Financial and investment analysts,NC, ,1112,Financial and investment analysts, 
+95,B013,"Securities agents, investment dealers and brokers",NC, ,1113,"Securities agents, investment dealers and brokers", 
+96,B014,Other financial officers,NC, ,1114,Other financial officers, 
+98,B021,Specialists in human resources,NC/T, ,1121,Human resources professionals, 
+99,B022,Professional occupations in business services to management,NU, ,1122,Professional occupations in business management consulting, 
+100,B022,Professional occupations in business services to management,NU,*,1123,"Professional occupations in advertising, marketing and public relations",Professional occupations in advertising and marketing
+105,B111,Bookkeepers,NC/T, ,1311,Accounting technicians and bookkeepers, 
+106,B112,Loan officers,NC/T, ,6235,Financial sales representatives, 
+107,B113,Insurance adjusters and claims examiners,NC, ,1312,Insurance adjusters and claims examiners, 
+108,B114,Insurance underwriters,NC, ,1313,Insurance underwriters, 
+109,B115,"Assessors, valuators and appraisers",NC, ,1314,"Assessors, valuators and appraisers", 
+110,B116,"Customs, ship and other brokers",NC, ,1315,"Customs, ship and other brokers", 
+114,B211,Secretaries (except legal and medical),NU,*,1241,Administrative assistants,Except administrative assistants formerly in General office clerks
+115,B212,Legal secretaries,NU,*,1242,Legal administrative assistants,Except legal assistants
+116,B213,Medical secretaries,NC/T, ,1243,Medical administrative assistants, 
+117,B214,Court recorders and medical transcriptionists,NC/T, ,1251,"Court reporters, medical transcriptionists and related occupations", 
+120,B311,Administrative officers,NC, ,1221,Administrative officers, 
+121,B312,Executive assistants,NC, ,1222,Executive assistants, 
+122,B313,Personnel and recruitment officers,NC/T, ,1223,Human resources and recruitment officers, 
+123,B314,Property administrators,NC, ,1224,Property administrators, 
+124,B315,Purchasing agents and officers,NC, ,1225,Purchasing agents and officers, 
+125,B316,Conference and event planners,NC, ,1226,Conference and event planners, 
+126,B317,Court officers and justices of the peace,NC, ,1227,Court officers and justices of the peace, 
+127,B318,"Immigration, employment insurance and revenue officers",NC/T, ,1228,"Employment insurance, immigration, border services and revenue officers", 
+133,B411,"Supervisors, general office and administrative support clerks",NU, ,1211,"Supervisors, general office and administrative support workers", 
+134,B411,"Supervisors, general office and administrative support clerks",NU,*,1213,"Supervisors, library, correspondence and related information workers",Supervisors of regulatory clerks
+135,B411,"Supervisors, general office and administrative support clerks",NU,*,1252,Health information management occupations,Medical records unit supervisors
+136,B412,"Supervisors, finance and insurance clerks",NU, ,1212,"Supervisors, finance and insurance office workers", 
+137,B412,"Supervisors, finance and insurance clerks",NU,*,6314,Customer and information services supervisors,Customer service representatives supervisors - financial services
+138,B413,"Supervisors, library, correspondence and related information clerks",NU,*,1213,"Supervisors, library, correspondence and related information workers",Except supervisors of regulatory clerks
+139,B413,"Supervisors, library, correspondence and related information clerks",NU,*,6314,Customer and information services supervisors,Customer and information services supervisors (except financial services)
+140,B414,"Supervisors, mail and message distribution occupations",NC, ,1214,"Supervisors, mail and message distribution occupations", 
+141,B415,"Supervisors, recording, distributing and scheduling occupations",NC/T, ,1215,"Supervisors, supply chain, tracking and scheduling co-ordination occupations", 
+150,B511,General office clerks,NU,*,1241,Administrative assistants,Administrative assistants formerly in General office clerks
+151,B511,General office clerks,NU,*,1411,General office support workers,Except filing clerks and office administration clerks
+152,B511,General office clerks,NU,*,1454,Survey interviewers and statistical clerks,Meter readers
+153,B513,Records management and filing clerks,NU,*,1252,Health information management occupations,Medical records technicians
+154,B513,Records management and filing clerks,NU, ,1253,Records management technicians, 
+155,B513,Records management and filing clerks,NU,*,1411,General office support workers,Filing clerks
+156,B514,Receptionists and switchboard operators,NU,*,1414,Receptionists,Receptionists and switchboard operators
+159,B522,Data entry clerks,NC, ,1422,Data entry clerks, 
+160,B523,Desktop publishing operators and related occupations,NC, ,1423,Desktop publishing operators and related occupations, 
+161,B524,Telephone operators,NU,*,1414,Receptionists,Telephone operators
+164,B531,Accounting and related clerks,NC, ,1431,Accounting and related clerks, 
+165,B532,Payroll clerks,NC, ,1432,Payroll clerks, 
+166,B533,Customer service representatives - financial services,NC/T, ,6551,Customer services representatives - financial institutions, 
+167,B534,"Banking, insurance and other financial clerks",NC, ,1434,"Banking, insurance and other financial clerks", 
+168,B535,Collectors,NC, ,1435,Collectors, 
+171,B541,Administrative clerks,NU,*,1411,General office support workers,Office administration clerks
+172,B541,Administrative clerks,NU,*,1452,"Correspondence, publication and regulatory clerks",Regulatory clerks
+173,B542,Personnel clerks,NC, ,1415,Personnel clerks, 
+174,B543,Court clerks,NC, ,1416,Court clerks, 
+177,B551,Library clerks,NU,*,1451,Library assistants and clerks,Except library assistants
+178,B552,"Correspondence, publication and related clerks",NU,*,1452,"Correspondence, publication and regulatory clerks",Except regulatory clerks
+179,B553,"Customer service, information and related clerks",NC/T, ,6552,Other customer and information services representatives, 
+180,B554,Survey interviewers and statistical clerks,NU,*,1454,Survey interviewers and statistical clerks,Except meter readers
+182,B561,"Mail, postal and related clerks",NC/T, ,1511,"Mail, postal and related workers", 
+183,B562,Letter carriers,NC, ,1512,Letter carriers, 
+184,B563,"Couriers, messengers and door-to-door distributors",NC, ,1513,"Couriers, messengers and door-to-door distributors", 
+186,B571,Shippers and receivers,NC, ,1521,Shippers and receivers, 
+187,B572,Storekeepers and parts clerks,NC/T, ,1522,Storekeepers and partspersons, 
+188,B573,Production clerks,NC/T, ,1523,Production logistics co-ordinators, 
+189,B574,Purchasing and inventory clerks,NC/T, ,1524,Purchasing and inventory control workers, 
+190,B575,Dispatchers and radio operators,NC/T, ,1525,Dispatchers, 
+191,B576,Transportation route and crew schedulers,NC, ,1526,Transportation route and crew schedulers, 
+197,C011,Physicists and astronomers,NU,*,2111,Physicists and astronomers,Except atmospheric physicist
+198,C012,Chemists,NC, ,2112,Chemists, 
+199,C013,"Geologists, geochemists and geophysicists",NC/T, ,2113,Geoscientists and oceanographers, 
+200,C014,Meteorologists,NU,*,2111,Physicists and astronomers,Atmospheric physicist
+201,C014,Meteorologists,NU, ,2114,Meteorologists and climatologists, 
+202,C015,Other professional occupations in physical sciences,NC, ,2115,Other professional occupations in physical sciences, 
+204,C021,Biologists and related scientists,NC, ,2121,Biologists and related scientists, 
+205,C022,Forestry professionals,NC, ,2122,Forestry professionals, 
+206,C023,"Agricultural representatives, consultants and specialists",NC, ,2123,"Agricultural representatives, consultants and specialists", 
+208,C031,Civil engineers,NC, ,2131,Civil engineers, 
+209,C032,Mechanical engineers,NC, ,2132,Mechanical engineers, 
+210,C033,Electrical and electronics engineers,NC, ,2133,Electrical and electronics engineers, 
+211,C034,Chemical engineers,NC, ,2134,Chemical engineers, 
+213,C041,Industrial and manufacturing engineers,NC, ,2141,Industrial and manufacturing engineers, 
+214,C042,Metallurgical and materials engineers,NC, ,2142,Metallurgical and materials engineers, 
+215,C043,Mining engineers,NC, ,2143,Mining engineers, 
+216,C044,Geological engineers,NC, ,2144,Geological engineers, 
+217,C045,Petroleum engineers,NC, ,2145,Petroleum engineers, 
+218,C046,Aerospace engineers,NC, ,2146,Aerospace engineers, 
+219,C047,Computer engineers (except software engineers and designers),NC, ,2147,Computer engineers (except software engineers and designers), 
+220,C048,"Other professional engineers, n.e.c.",NC, ,2148,"Other professional engineers, n.e.c.", 
+222,C051,Architects,NC, ,2151,Architects, 
+223,C052,Landscape architects,NC, ,2152,Landscape architects, 
+224,C053,Urban and land use planners,NC, ,2153,Urban and land use planners, 
+225,C054,Land surveyors,NC, ,2154,Land surveyors, 
+228,C061,"Mathematicians, statisticians and actuaries",NU,*,1254,Statistical officers and related research support occupations,Statistical technicians and statistical officers
+229,C061,"Mathematicians, statisticians and actuaries",NU, ,2161,"Mathematicians, statisticians and actuaries", 
+231,C071,Information systems analysts and consultants,NC, ,2171,Information systems analysts and consultants, 
+232,C072,Database analysts and data administrators,NC, ,2172,Database analysts and data administrators, 
+233,C073,Software engineers and designers,NC, ,2173,Software engineers and designers, 
+234,C074,Computer programmers and interactive media developers,NC, ,2174,Computer programmers and interactive media developers, 
+235,C075,Web designers and developers,NC, ,2175,Web designers and developers, 
+239,C111,Chemical technologists and technicians,NC, ,2211,Chemical technologists and technicians, 
+240,C112,Geological and mineral technologists and technicians,NC, ,2212,Geological and mineral technologists and technicians, 
+241,C113,Meteorological technicians,NU,*,2255,Technical occupations in geomatics and meteorology,Meteorological technicians
+243,C121,Biological technologists and technicians,NC, ,2221,Biological technologists and technicians, 
+244,C122,Agricultural and fish products inspectors,NC, ,2222,Agricultural and fish products inspectors, 
+245,C123,Forestry technologists and technicians,NC, ,2223,Forestry technologists and technicians, 
+246,C124,Conservation and fishery officers,NC, ,2224,Conservation and fishery officers, 
+247,C125,Landscape and horticulture technicians and specialists,NC, ,2225,Landscape and horticulture technicians and specialists, 
+249,C131,Civil engineering technologists and technicians,NC, ,2231,Civil engineering technologists and technicians, 
+250,C132,Mechanical engineering technologists and technicians,NC, ,2232,Mechanical engineering technologists and technicians, 
+251,C133,Industrial engineering and manufacturing technologists and technicians,NC, ,2233,Industrial engineering and manufacturing technologists and technicians, 
+252,C134,Construction estimators,NC, ,2234,Construction estimators, 
+254,C141,Electrical and electronics engineering technologists and technicians,NC, ,2241,Electrical and electronics engineering technologists and technicians, 
+255,C142,Electronic service technicians (household and business equipment),NC, ,2242,Electronic service technicians (household and business equipment), 
+256,C143,Industrial instrument technicians and mechanics,NC, ,2243,Industrial instrument technicians and mechanics, 
+257,C144,"Aircraft instrument, electrical and avionics mechanics, technicians and inspectors",NC, ,2244,"Aircraft instrument, electrical and avionics mechanics, technicians and inspectors", 
+259,C151,Architectural technologists and technicians,NC, ,2251,Architectural technologists and technicians, 
+260,C152,Industrial designers,NC, ,2252,Industrial designers, 
+261,C153,Drafting technologists and technicians,NC, ,2253,Drafting technologists and technicians, 
+262,C154,Land survey technologists and technicians,NC, ,2254,Land survey technologists and technicians, 
+263,C155,Mapping and related technologists and technicians,NU,*,2255,Technical occupations in geomatics and meteorology,Except meteorological technicians
+265,C161,Non-destructive testers and inspectors,NC/T, ,2261,Non-destructive testers and inspection technicians, 
+266,C162,Engineering inspectors and regulatory officers,NC, ,2262,Engineering inspectors and regulatory officers, 
+267,C163,Inspectors in public and environmental health and occupational health and safety,NC, ,2263,Inspectors in public and environmental health and occupational health and safety, 
+268,C164,Construction inspectors,NC, ,2264,Construction inspectors, 
+270,C171,"Air pilots, flight engineers and flying instructors",NC, ,2271,"Air pilots, flight engineers and flying instructors", 
+271,C172,Air traffic control and related occupations,NC/T, ,2272,Air traffic controllers and related occupations, 
+272,C173,"Deck officers, water transport",NC, ,2273,"Deck officers, water transport", 
+273,C174,"Engineer officers, water transport",NC, ,2274,"Engineer officers, water transport", 
+274,C175,Railway traffic controllers and marine traffic regulators,NC, ,2275,Railway traffic controllers and marine traffic regulators, 
+276,C181,Computer network technicians,NC, ,2281,Computer network technicians, 
+277,C182,User support technicians,NC, ,2282,User support technicians, 
+278,C183,Systems testing technicians,NC/T, ,2283,Information systems testing technicians, 
+282,D011,Specialist physicians,NC, ,3111,Specialist physicians, 
+283,D012,General practitioners and family physicians,NC, ,3112,General practitioners and family physicians, 
+284,D013,Dentists,NC, ,3113,Dentists, 
+285,D014,Veterinarians,NC, ,3114,Veterinarians, 
+287,D021,Optometrists,NC, ,3121,Optometrists, 
+288,D022,Chiropractors,NC, ,3122,Chiropractors, 
+289,D023,Other professional occupations in health diagnosing and treating,NC, ,3125,Other professional occupations in health diagnosing and treating, 
+291,D031,Pharmacists,NC, ,3131,Pharmacists, 
+292,D032,Dietitians and nutritionists,NC, ,3132,Dietitians and nutritionists, 
+294,D041,Audiologists and speech-language pathologists,NC, ,3141,Audiologists and speech-language pathologists, 
+295,D042,Physiotherapists,NC, ,3142,Physiotherapists, 
+296,D043,Occupational therapists,NC, ,3143,Occupational therapists, 
+297,D044,Other professional occupations in therapy and assessment,NU,*,3144,Other professional occupations in therapy and assessment,Except kinesiologists and exercise physiologists and therapists
+302,D111,Head nurses and supervisors,NC/T, ,3011,Nursing co-ordinators and supervisors, 
+303,D112,Registered nurses,NU, ,3012,Registered nurses and registered psychiatric nurses, 
+304,D112,Registered nurses,NU,*,3124,Allied primary health practitioners,Nurse practitioners
+309,D211,Medical laboratory technologists and pathologists' assistants,NU, ,3211,Medical laboratory technologists, 
+310,D211,Medical laboratory technologists and pathologists' assistants,NU,*,3212,Medical laboratory technicians and pathologists' assistants,Pathology assistants and morgue attendant supervisors
+311,D212,Medical laboratory technicians,NU,*,3212,Medical laboratory technicians and pathologists' assistants,Except pathology assistants and morgue attendant supervisors
+312,D213,Veterinary and animal health technologists and technicians,NC/T, ,3213,Animal health technologists and veterinary technicians, 
+313,D214,"Respiratory therapists, clinical perfusionists and cardiopulmonary technologists",NC, ,3214,"Respiratory therapists, clinical perfusionists and cardiopulmonary technologists", 
+314,D215,Medical radiation technologists,NC, ,3215,Medical radiation technologists, 
+315,D216,Medical sonographers,NC, ,3216,Medical sonographers, 
+316,D217,Cardiology technologists,NU,*,3217,"Cardiology technologists and electrophysiological diagnostic technologists, n.e.c.",Cardiology technologists
+317,D218,"Electroencephalographic and other diagnostic technologists, n.e.c.",NU,*,3217,"Cardiology technologists and electrophysiological diagnostic technologists, n.e.c.","Electrophysiological diagnostic technologists, n.e.c."
+318,D219,Other medical technologists and technicians (except dental health),NU,*,3219,Other medical technologists and technicians (except dental health),Except pharmacy technicians
+320,D221,Denturists,NC, ,3221,Denturists, 
+321,D222,Dental hygienists and dental therapists,NC, ,3222,Dental hygienists and dental therapists, 
+322,D223,"Dental technologists, technicians and laboratory bench workers",NC/T, ,3223,"Dental technologists, technicians and laboratory assistants", 
+326,D231,Opticians,NC, ,3231,Opticians, 
+327,D232,Midwives and practitioners of natural healing,NU,*,3124,Allied primary health practitioners,Midwives
+328,D232,Midwives and practitioners of natural healing,NU, ,3232,Practitioners of natural healing, 
+329,D233,Licensed practical nurses,NC, ,3233,Licensed practical nurses, 
+330,D234,Ambulance attendants and other paramedical occupations,NU, ,3234,Paramedical occupations, 
+331,D234,Ambulance attendants and other paramedical occupations,NU,*,3413,"Nurse aides, orderlies and patient service associates",Emergency medical care assistants
+332,D235,Other technical occupations in therapy and assessment,NU, ,3236,Massage therapists, 
+333,D235,Other technical occupations in therapy and assessment,NU,*,3237,Other technical occupations in therapy and assessment,Except physiotherapy and occupational therapy assistants and technicians
+339,D311,Dental assistants,NC, ,3411,Dental assistants, 
+340,D312,"Nurse aides, orderlies and patient service associates",NU,*,3413,"Nurse aides, orderlies and patient service associates",Except emergency medical care assistants
+341,D313,Other assisting occupations in support of health services,NU,*,3219,Other medical technologists and technicians (except dental health),Pharmacy technicians
+342,D313,Other assisting occupations in support of health services,NU,*,3237,Other technical occupations in therapy and assessment,Physiotherapy and occupational therapy assistants and technicians
+343,D313,Other assisting occupations in support of health services,NU, ,3414,Other assisting occupations in support of health services, 
+354,E011,Judges,NC, ,4111,Judges, 
+355,E012,Lawyers and Quebec notaries,NC, ,4112,Lawyers and Quebec notaries, 
+357,E021,Psychologists,NC, ,4151,Psychologists, 
+358,E022,Social workers,NC, ,4152,Social workers, 
+359,E023,"Family, marriage and other related counsellors",NC, ,4153,"Family, marriage and other related counsellors", 
+360,E024,Ministers of religion,NC/T, ,4154,Professional occupations in religion, 
+361,E025,Probation and parole officers and related occupations,NC, ,4155,Probation and parole officers and related occupations, 
+367,E031,"Natural and applied science policy researchers, consultants and program officers",NC, ,4161,"Natural and applied science policy researchers, consultants and program officers", 
+368,E032,Economists and economic policy researchers and analysts,NC, ,4162,Economists and economic policy researchers and analysts, 
+369,E033,Business development officers and marketing researchers and consultants,NU,*,1123,"Professional occupations in advertising, marketing and public relations",Marketing consultants —advertising
+370,E033,Business development officers and marketing researchers and consultants,NU, ,4163,Business development officers and marketing researchers and consultants, 
+371,E034,"Social policy researchers, consultants and program officers",NU,*,1254,Statistical officers and related research support occupations,Social science research assistants (except university)
+372,E034,"Social policy researchers, consultants and program officers",NU, ,4164,"Social policy researchers, consultants and program officers", 
+373,E035,"Education policy researchers, consultants and program officers",NC, ,4166,"Education policy researchers, consultants and program officers", 
+374,E036,"Recreation, sports and fitness program supervisors and consultants",NU,*,3144,Other professional occupations in therapy and assessment,Kinesiologists and exercise physiologists and therapists
+375,E036,"Recreation, sports and fitness program supervisors and consultants",NU, ,4167,"Recreation, sports and fitness policy researchers, consultants and program officers", 
+376,E036,"Recreation, sports and fitness program supervisors and consultants",NU,*,5254,"Program leaders and instructors in recreation, sport and fitness","Fitness supervisors, fitness appraisers and camp and pool co-ordinators"
+377,E037,Program officers unique to government,NC, ,4168,Program officers unique to government, 
+378,E038,"Other professional occupations in social science, n.e.c.",NC, ,4169,"Other professional occupations in social science, n.e.c.", 
+379,E039,"Health policy researchers, consultants and program officers",NC, ,4165,"Health policy researchers, consultants and program officers", 
+383,E111,University professors,NU,*,4011,University professors and lecturers,Except postdoctoral fellows
+384,E112,Post-secondary teaching and research assistants,NU,*,4011,University professors and lecturers,Postdoctoral fellows
+385,E112,Post-secondary teaching and research assistants,NU, ,4012,Post-secondary teaching and research assistants, 
+387,E121,College and other vocational instructors,NC, ,4021,College and other vocational instructors, 
+390,E131,Secondary school teachers,NU, ,4031,Secondary school teachers, 
+391,E131,Secondary school teachers,NU,*,5211,Library and public archive technicians,High school librarians
+392,E132,Elementary school and kindergarten teachers,NU, ,4032,Elementary school and kindergarten teachers, 
+393,E132,Elementary school and kindergarten teachers,NU,*,5211,Library and public archive technicians,Elementary school librarians
+394,E133,Educational counsellors,NC, ,4033,Educational counsellors, 
+401,E211,Paralegal and related occupations,NU,*,1242,Legal administrative assistants,Legal assistants
+402,E211,Paralegal and related occupations,NU, ,4211,Paralegal and related occupations, 
+403,E212,Community and social service workers,NC/T, ,4212,Social and community service workers, 
+404,E213,Employment counsellors,NC, ,4156,Employment counsellors, 
+405,E214,Instructors and teachers of persons with disabilities,NC/T, ,4215,Instructors of persons with disabilities, 
+406,E215,Other instructors,NC, ,4216,Other instructors, 
+407,E216,Other religious occupations,NC, ,4217,Other religious occupations, 
+408,E217,Early childhood educators and assistants,NC, ,4214,Early childhood educators and assistants, 
+414,F011,Librarians,NC, ,5111,Librarians, 
+415,F012,Conservators and curators,NC, ,5112,Conservators and curators, 
+416,F013,Archivists,NC, ,5113,Archivists, 
+419,F021,Authors and writers,NC, ,5121,Authors and writers, 
+420,F022,Editors,NC, ,5122,Editors, 
+421,F023,Journalists,NC, ,5123,Journalists, 
+422,F024,Professional occupations in public relations and communications,NU,*,1123,"Professional occupations in advertising, marketing and public relations",Professional occupations in public relations and communications
+423,F025,"Translators, terminologists and interpreters",NC, ,5125,"Translators, terminologists and interpreters", 
+425,F031,"Producers, directors, choreographers and related occupations",NC, ,5131,"Producers, directors, choreographers and related occupations", 
+426,F032,"Conductors, composers and arrangers",NC, ,5132,"Conductors, composers and arrangers", 
+427,F033,Musicians and singers,NC, ,5133,Musicians and singers, 
+428,F034,Dancers,NC, ,5134,Dancers, 
+429,F035,Actors and comedians,NC, ,5135,Actors and comedians, 
+430,F036,"Painters, sculptors and other visual artists",NC, ,5136,"Painters, sculptors and other visual artists", 
+435,F111,Library and archive technicians and assistants,NU,*,1451,Library assistants and clerks,Library assistants
+436,F111,Library and archive technicians and assistants,NU,*,5211,Library and public archive technicians,Except elementary school and high school librarians
+437,F112,Technical occupations related to museums and art galleries,NC, ,5212,Technical occupations related to museums and art galleries, 
+439,F121,Photographers,NC, ,5221,Photographers, 
+440,F122,Film and video camera operators,NC, ,5222,Film and video camera operators, 
+441,F123,Graphic arts technicians,NC, ,5223,Graphic arts technicians, 
+442,F124,Broadcast technicians,NC, ,5224,Broadcast technicians, 
+443,F125,Audio and video recording technicians,NC, ,5225,Audio and video recording technicians, 
+444,F126,"Other technical and co-ordinating occupations in motion pictures, broadcasting and the performing arts",NC, ,5226,"Other technical and co-ordinating occupations in motion pictures, broadcasting and the performing arts", 
+445,F127,"Support occupations in motion pictures, broadcasting and the performing arts",NC/T, ,5227,"Support occupations in motion pictures, broadcasting, photography and the performing arts", 
+447,F131,Announcers and other broadcasters,NC, ,5231,Announcers and other broadcasters, 
+448,F132,Other performers,NC/T, ,5232,"Other performers, n.e.c.", 
+450,F141,Graphic designers and illustrators,NC, ,5241,Graphic designers and illustrators, 
+451,F142,Interior designers,NU,*,5242,Interior designers and interior decorators,Interior designers
+452,F143,"Theatre, fashion, exhibit and other creative designers",NC, ,5243,"Theatre, fashion, exhibit and other creative designers", 
+453,F144,Artisans and craftspersons,NC, ,5244,Artisans and craftspersons, 
+454,F145,"Patternmakers - textile, leather and fur products",NC, ,5245,"Patternmakers - textile, leather and fur products", 
+456,F151,Athletes,NC, ,5251,Athletes, 
+457,F152,Coaches,NC, ,5252,Coaches, 
+458,F153,Sports officials and referees,NC, ,5253,Sports officials and referees, 
+459,F154,"Program leaders and instructors in recreation, sport and fitness",NU,*,5254,"Program leaders and instructors in recreation, sport and fitness","Except fitness supervisors, fitness appraisers and camp and pool co-ordinators"
+470,G011,Retail trade supervisors,NU,*,0621,Retail and wholesale trade managers,"Certain food store section managers, e.g., meat managers and deli managers in food stores"
+471,G011,Retail trade supervisors,NU, ,6211,Retail sales supervisors, 
+472,G012,Food service supervisors,NC, ,6311,Food service supervisors, 
+473,G013,Executive housekeepers,NC, ,6312,Executive housekeepers, 
+474,G014,Dry cleaning and laundry supervisors,NU,*,6316,Other services supervisors,Dry cleaning and laundry supervisors
+475,G015,Cleaning supervisors,NC, ,6315,Cleaning supervisors, 
+476,G016,Other service supervisors,NU,*,6313,"Accommodation, travel, tourism and related services supervisors",Except supervisors of casino occupations
+477,G016,Other service supervisors,NU,*,6316,Other services supervisors,Except dry cleaning and laundry supervisors
+481,G111,Sales representatives - wholesale trade (non-technical),NC/T, ,6411,Sales and account representatives - wholesale trade (non-technical), 
+483,G121,Technical sales specialists - wholesale trade,NU,*,6221,Technical sales specialists - wholesale trade,Except grain elevator operators
+486,G131,Insurance agents and brokers,NC, ,6231,Insurance agents and brokers, 
+487,G132,Real estate agents and salespersons,NC, ,6232,Real estate agents and salespersons, 
+488,G133,Retail and wholesale buyers,NC, ,6222,Retail and wholesale buyers, 
+489,G134,Grain elevator operators,NU,*,6221,Technical sales specialists - wholesale trade,Grain elevator operators
+494,G211,Retail salespersons and sales clerks,NU,*,5242,Interior designers and interior decorators,Interior decorators
+495,G211,Retail salespersons and sales clerks,NU, ,6421,Retail salespersons, 
+498,G311,Cashiers,NC, ,6611,Cashiers, 
+501,G411,Chefs,NC, ,6321,Chefs, 
+502,G412,Cooks,NC, ,6322,Cooks, 
+505,G511,Maîtres d'hôtel and hosts/hostesses,NC, ,6511,Maîtres d'hôtel and hosts/hostesses, 
+506,G512,Bartenders,NC, ,6512,Bartenders, 
+507,G513,Food and beverage servers,NC, ,6513,Food and beverage servers, 
+512,G611,Police officers (except commissioned),NC, ,4311,Police officers (except commissioned), 
+513,G612,Firefighters,NC, ,4312,Firefighters, 
+517,G621,Sheriffs and bailiffs,NC, ,4421,Sheriffs and bailiffs, 
+518,G622,Correctional service officers,NC, ,4422,Correctional service officers, 
+519,G623,"By-law enforcement and other regulatory officers, n.e.c.",NC, ,4423,"By-law enforcement and other regulatory officers, n.e.c.", 
+520,G624,"Other ranks, armed forces",NC/T, ,4313,Non-commissioned ranks of the Canadian Forces, 
+521,G625,Other protective service occupations,NU,*,6541,Security guards and related security service occupations,Other protective service occupations
+523,G631,Security guards and related occupations,NU,*,6541,Security guards and related security service occupations,Security guards and related occupations
+528,G711,Travel counsellors,NC, ,6521,Travel counsellors, 
+529,G712,Pursers and flight attendants,NC, ,6522,Pursers and flight attendants, 
+530,G713,Airline sales and service agents,NC/T, ,6523,Airline ticket and service agents, 
+531,G714,"Ticket agents, cargo service representatives and related clerks (except airline)",NC/T, ,6524,"Ground and water transport ticket agents, cargo service representatives and related clerks", 
+532,G715,Hotel front desk clerks,NC, ,6525,Hotel front desk clerks, 
+535,G721,Tour and travel guides,NC, ,6531,Tour and travel guides, 
+536,G722,Outdoor sport and recreational guides,NC, ,6532,Outdoor sport and recreational guides, 
+537,G723,Casino occupations,NU,*,6313,"Accommodation, travel, tourism and related services supervisors",Supervisors of casino occupations
+538,G723,Casino occupations,NU, ,6533,Casino occupations, 
+540,G731,"Operators and attendants in amusement, recreation and sport",NC, ,6722,"Operators and attendants in amusement, recreation and sport", 
+541,G732,Other attendants in accommodation and travel,NU,*,6721,"Support occupations in accommodation, travel and facilities set-up services",Except facilities porters
+544,G811,"Visiting homemakers, housekeepers and related occupations",NU,*,4411,Home child care providers,Foster parents
+545,G811,"Visiting homemakers, housekeepers and related occupations",NU, ,4412,"Home support workers, housekeepers and related occupations", 
+546,G812,Elementary and secondary school teacher assistants,NC, ,4413,Elementary and secondary school teacher assistants, 
+547,G814,"Babysitters, nannies and parents' helpers",NU,*,4411,Home child care providers,Except foster parents
+553,G911,Hairstylists and barbers,NC, ,6341,Hairstylists and barbers, 
+554,G912,Funeral directors and embalmers,NC, ,6346,Funeral directors and embalmers, 
+556,G921,"Image, social and other personal consultants",NC, ,6561,"Image, social and other personal consultants", 
+557,G922,"Estheticians, electrologists and related occupations",NC, ,6562,"Estheticians, electrologists and related occupations", 
+558,G923,Pet groomers and animal care workers,NC, ,6563,Pet groomers and animal care workers, 
+559,G924,Other personal service occupations,NC, ,6564,Other personal service occupations, 
+561,G931,Light duty cleaners,NC, ,6731,Light duty cleaners, 
+562,G932,Specialized cleaners,NC, ,6732,Specialized cleaners, 
+563,G933,"Janitors, caretakers and building superintendents",NC, ,6733,"Janitors, caretakers and building superintendents", 
+565,G941,"Butchers, meat cutters and fishmongers - retail and wholesale",NC, ,6331,"Butchers, meat cutters and fishmongers - retail and wholesale", 
+566,G942,Bakers,NC, ,6332,Bakers, 
+568,G961,"Food counter attendants, kitchen helpers and related occupations",NU,*,6711,"Food counter attendants, kitchen helpers and related support occupations","Except popcorn, ice cream and hot dog vendors"
+571,G971,Service station attendants,NC, ,6621,Service station attendants, 
+572,G972,Grocery clerks and store shelf stockers,NC/T, ,6622,"Store shelf stockers, clerks and order fillers", 
+573,G973,Other elemental sales occupations,NU, ,6623,Other sales related occupations, 
+574,G973,Other elemental sales occupations,NU,*,6711,"Food counter attendants, kitchen helpers and related support occupations","Popcorn, ice cream and hot dog vendors"
+576,G981,Dry cleaning and laundry occupations,NU,*,6741,"Dry cleaning, laundry and related occupations",Dry cleaning and laundry occupations
+577,G982,"Ironing, pressing and finishing occupations",NU,*,6741,"Dry cleaning, laundry and related occupations","Ironing, pressing and finishing occupations"
+578,G983,Other elemental service occupations,NC/T, ,6742,"Other service support occupations, n.e.c.", 
+586,H011,"Supervisors, machinists and related occupations",NU,*,7201,"Contractors and supervisors, machining, metal forming, shaping and erecting trades and related occupations","Supervisors, machinists and related occupations"
+587,H012,"Contractors and supervisors, electrical trades and telecommunications occupations",NC, ,7202,"Contractors and supervisors, electrical trades and telecommunications occupations", 
+588,H013,"Contractors and supervisors, pipefitting trades",NC, ,7203,"Contractors and supervisors, pipefitting trades", 
+589,H014,"Contractors and supervisors, metal forming, shaping and erecting trades",NU,*,7201,"Contractors and supervisors, machining, metal forming, shaping and erecting trades and related occupations","Contractors and supervisors, metal forming, shaping and erecting trades"
+590,H015,"Contractors and supervisors, carpentry trades",NC, ,7204,"Contractors and supervisors, carpentry trades", 
+591,H016,"Contractors and supervisors, mechanic trades",NC, ,7301,"Contractors and supervisors, mechanic trades", 
+592,H017,"Contractors and supervisors, heavy construction equipment crews",NC/T, ,7302,"Contractors and supervisors, heavy equipment operator crews", 
+593,H018,"Supervisors, printing and related occupations",NC, ,7303,"Supervisors, printing and related occupations", 
+594,H019,"Contractors and supervisors, other construction trades, installers, repairers and servicers",NC, ,7205,"Contractors and supervisors, other construction trades, installers, repairers and servicers", 
+596,H021,"Supervisors, railway transport operations",NC, ,7304,"Supervisors, railway transport operations", 
+597,H022,"Supervisors, motor transport and other ground transit operators",NC, ,7305,"Supervisors, motor transport and other ground transit operators", 
+600,H111,Plumbers,NC, ,7251,Plumbers, 
+601,H112,"Steamfitters, pipefitters and sprinkler system installers",NC, ,7252,"Steamfitters, pipefitters and sprinkler system installers", 
+602,H113,Gas fitters,NC, ,7253,Gas fitters, 
+604,H121,Carpenters,NC, ,7271,Carpenters, 
+605,H122,Cabinetmakers,NC, ,7272,Cabinetmakers, 
+607,H131,Bricklayers,NC, ,7281,Bricklayers, 
+608,H132,Concrete finishers,NC, ,7282,Concrete finishers, 
+609,H133,Tilesetters,NC, ,7283,Tilesetters, 
+610,H134,"Plasterers, drywall installers and finishers and lathers",NC, ,7284,"Plasterers, drywall installers and finishers and lathers", 
+612,H141,Roofers and shinglers,NC, ,7291,Roofers and shinglers, 
+613,H142,Glaziers,NC, ,7292,Glaziers, 
+614,H143,Insulators,NC, ,7293,Insulators, 
+615,H144,Painters and decorators,NC/T, ,7294,Painters and decorators (except interior decorators), 
+616,H145,Floor covering installers,NC, ,7295,Floor covering installers, 
+620,H211,Electricians (except industrial and power system),NC, ,7241,Electricians (except industrial and power system), 
+621,H212,Industrial electricians,NC, ,7242,Industrial electricians, 
+622,H213,Power system electricians,NC, ,7243,Power system electricians, 
+623,H214,Electrical power line and cable workers,NC, ,7244,Electrical power line and cable workers, 
+624,H215,Telecommunications line and cable workers,NC, ,7245,Telecommunications line and cable workers, 
+625,H216,Telecommunications installation and repair workers,NC, ,7246,Telecommunications installation and repair workers, 
+626,H217,Cable television service and maintenance technicians,NC, ,7247,Cable television service and maintenance technicians, 
+628,H221,Stationary engineers and auxiliary equipment operators,NU,*,9241,Power engineers and power systems operators,Stationary engineers and auxiliary equipment operators
+629,H222,Power systems and power station operators,NU,*,9241,Power engineers and power systems operators,Power systems and power station operators
+633,H311,Machinists and machining and tooling inspectors,NC, ,7231,Machinists and machining and tooling inspectors, 
+634,H312,Tool and die makers,NC, ,7232,Tool and die makers, 
+637,H321,Sheet metal workers,NC, ,7233,Sheet metal workers, 
+638,H322,Boilermakers,NC, ,7234,Boilermakers, 
+639,H323,Structural metal and platework fabricators and fitters,NC, ,7235,Structural metal and platework fabricators and fitters, 
+640,H324,Ironworkers,NC, ,7236,Ironworkers, 
+641,H325,Blacksmiths and die setters,NU,*,7384,"Other trades and related occupations, n.e.c.",Blacksmiths and die setters
+642,H326,Welders and related machine operators,NC, ,7237,Welders and related machine operators, 
+645,H411,Construction millwrights and industrial mechanics (except textile),NU,*,7311,Construction millwrights and industrial mechanics,Except textile machinery mechanics and repairers
+646,H412,Heavy-duty equipment mechanics,NC, ,7312,Heavy-duty equipment mechanics, 
+647,H413,Refrigeration and air conditioning mechanics,NC, ,7313,Refrigeration and air conditioning mechanics, 
+648,H414,Railway carmen/women,NC, ,7314,Railway carmen/women, 
+649,H415,Aircraft mechanics and aircraft inspectors,NC, ,7315,Aircraft mechanics and aircraft inspectors, 
+650,H416,Machine fitters,NC, ,7316,Machine fitters, 
+651,H417,Textile machinery mechanics and repairers,NU,*,7311,Construction millwrights and industrial mechanics,Textile machinery mechanics and repairers
+652,H418,Elevator constructors and mechanics,NC, ,7318,Elevator constructors and mechanics, 
+654,H421,"Automotive service technicians, truck and bus mechanics and mechanical repairers",NC, ,7321,"Automotive service technicians, truck and bus mechanics and mechanical repairers", 
+655,H422,Motor vehicle body repairers,NC, ,7322,Motor vehicle body repairers, 
+657,H431,Oil and solid fuel heating mechanics,NC, ,7331,Oil and solid fuel heating mechanics, 
+658,H432,Electric appliance servicers and repairers,NC/T, ,7332,Appliance servicers and repairers, 
+659,H433,Electrical mechanics,NC, ,7333,Electrical mechanics, 
+660,H434,Motorcycle and other related mechanics,NU,*,7334,"Motorcycle, all-terrain vehicle and other related mechanics",Except motor boat mechanics
+661,H435,Other small engine and equipment mechanics,NU,*,7334,"Motorcycle, all-terrain vehicle and other related mechanics",Motor boat mechanics
+662,H435,Other small engine and equipment mechanics,NU, ,7335,Other small engine and small equipment repairers, 
+668,H511,Upholsterers,NC, ,6345,Upholsterers, 
+669,H512,"Tailors, dressmakers, furriers and milliners",NC, ,6342,"Tailors, dressmakers, furriers and milliners", 
+670,H513,Shoe repairers and shoemakers,NC, ,6343,Shoe repairers and shoemakers, 
+671,H514,"Jewellers, watch repairers and related occupations",NC/T, ,6344,"Jewellers, jewellery and watch repairers and related occupations", 
+673,H521,Printing press operators,NC, ,7381,Printing press operators, 
+674,H522,Commercial divers,NU,*,7384,"Other trades and related occupations, n.e.c.",Commercial divers
+675,H523,Other trades and related occupations,NU,*,7384,"Other trades and related occupations, n.e.c.","Except commercial divers, blacksmiths and die setters"
+678,H531,Residential and commercial installers and servicers,NC, ,7441,Residential and commercial installers and servicers, 
+679,H532,Waterworks and gas maintenance workers,NC, ,7442,Waterworks and gas maintenance workers, 
+680,H533,Automotive mechanical installers and servicers,NC/T, ,7535,Other automotive mechanical installers and servicers, 
+681,H534,Pest controllers and fumigators,NC, ,7444,Pest controllers and fumigators, 
+682,H535,Other repairers and servicers,NC, ,7445,Other repairers and servicers, 
+686,H611,Heavy equipment operators (except crane),NC, ,7521,Heavy equipment operators (except crane), 
+687,H612,Public works maintenance equipment operators,NU,*,7522,Public works maintenance equipment operators and related workers,Except utility arborists
+689,H621,Crane operators,NC, ,7371,Crane operators, 
+690,H622,"Drillers and blasters - surface mining, quarrying and construction",NC, ,7372,"Drillers and blasters - surface mining, quarrying and construction", 
+691,H623,Water well drillers,NC, ,7373,Water well drillers, 
+695,H711,Truck drivers,NC/T, ,7511,Transport truck drivers, 
+696,H712,"Bus drivers, subway operators and other transit operators",NC, ,7512,"Bus drivers, subway operators and other transit operators", 
+697,H713,Taxi and limousine drivers and chauffeurs,NC, ,7513,Taxi and limousine drivers and chauffeurs, 
+698,H714,Delivery and courier service drivers,NC, ,7514,Delivery and courier service drivers, 
+700,H721,Railway and yard locomotive engineers,NC, ,7361,Railway and yard locomotive engineers, 
+701,H722,Railway conductors and brakemen/women,NC, ,7362,Railway conductors and brakemen/women, 
+703,H731,Railway yard workers,NU,*,7531,Railway yard and track maintenance workers,Railway yard workers
+704,H732,Railway track maintenance workers,NU,*,7531,Railway yard and track maintenance workers,Railway track maintenance workers
+705,H733,"Deck crew, water transport",NU,*,7532,Water transport deck and engine room crew,"Deck crew, water transport"
+706,H734,"Engine room crew, water transport",NU,*,7532,Water transport deck and engine room crew,"Engine room crew, water transport"
+707,H735,Lock and cable ferry operators and related occupations,NU,*,7533,Boat and cable ferry operators and related occupations,Lock and cable ferry operators and related occupations
+708,H736,Boat operators,NU,*,7533,Boat and cable ferry operators and related occupations,Boat operators
+709,H737,Air transport ramp attendants,NC, ,7534,Air transport ramp attendants, 
+716,H811,Longshore workers,NC, ,7451,Longshore workers, 
+717,H812,Material handlers,NU,*,6721,"Support occupations in accommodation, travel and facilities set-up services",Facilities porters
+718,H812,Material handlers,NU, ,7452,Material handlers, 
+721,H821,Construction trades helpers and labourers,NC, ,7611,Construction trades helpers and labourers, 
+722,H822,Other trades helpers and labourers,NU,*,7522,Public works maintenance equipment operators and related workers,Utility arborists
+723,H822,Other trades helpers and labourers,NU, ,7612,Other trades helpers and labourers, 
+725,H831,Public works and maintenance labourers,NC, ,7621,Public works and maintenance labourers, 
+726,H832,Railway and motor transport labourers,NC, ,7622,Railway and motor transport labourers, 
+734,I011,Farmers and farm managers,NC/T, ,0821,Managers in agriculture, 
+735,I012,Agricultural and related service contractors and managers,NU,*,8252,"Agricultural service contractors, farm supervisors and specialized livestock workers",Except farm supervisors and specialized livestock workers
+736,I013,Farm supervisors and specialized livestock workers,NU,*,8252,"Agricultural service contractors, farm supervisors and specialized livestock workers",Farm supervisors and specialized livestock workers
+737,I014,Nursery and greenhouse operators and managers,NC/T, ,0822,Managers in horticulture, 
+738,I015,Landscaping and grounds maintenance contractors and managers,NU,*,8255,"Contractors and supervisors, landscaping, grounds maintenance and horticulture services","Except supervisors, landscape and horticulture"
+739,I016,"Supervisors, landscape and horticulture",NU,*,8255,"Contractors and supervisors, landscaping, grounds maintenance and horticulture services","Supervisors, landscape and horticulture"
+740,I017,Aquaculture operators and managers,NC/T, ,0823,Managers in aquaculture, 
+742,I021,General farm workers,NC, ,8431,General farm workers, 
+743,I022,Nursery and greenhouse workers,NC, ,8432,Nursery and greenhouse workers, 
+747,I111,"Supervisors, logging and forestry",NC, ,8211,"Supervisors, logging and forestry", 
+749,I121,"Supervisors, mining and quarrying",NC, ,8221,"Supervisors, mining and quarrying", 
+750,I122,"Supervisors, oil and gas drilling and service",NC/T, ,8222,"Contractors and supervisors, oil and gas drilling and services", 
+752,I131,Underground production and development miners,NC, ,8231,Underground production and development miners, 
+753,I132,"Oil and gas well drillers, servicers, testers and related workers",NC, ,8232,"Oil and gas well drillers, servicers, testers and related workers", 
+755,I141,Underground mine service and support workers,NC, ,8411,Underground mine service and support workers, 
+756,I142,Oil and gas well drilling workers and services operators,NC/T, ,8412,Oil and gas well drilling and related workers and services operators, 
+758,I151,Logging machinery operators,NC, ,8241,Logging machinery operators, 
+760,I161,Chain saw and skidder operators,NC, ,8421,Chain saw and skidder operators, 
+761,I162,Silviculture and forestry workers,NC, ,8422,Silviculture and forestry workers, 
+763,I171,Fishing masters and officers,NC, ,8261,Fishing masters and officers, 
+764,I172,Fishing vessel skippers and fishermen/women,NC/T, ,8262,Fishermen/women, 
+766,I181,Fishing vessel deckhands,NC, ,8441,Fishing vessel deckhands, 
+767,I182,Trappers and hunters,NC, ,8442,Trappers and hunters, 
+770,I211,Harvesting labourers,NC, ,8611,Harvesting labourers, 
+771,I212,Landscaping and grounds maintenance labourers,NC, ,8612,Landscaping and grounds maintenance labourers, 
+772,I213,Aquaculture and marine harvest labourers,NC, ,8613,Aquaculture and marine harvest labourers, 
+773,I214,Mine labourers,NC, ,8614,Mine labourers, 
+774,I215,"Oil and gas drilling, servicing and related labourers",NC, ,8615,"Oil and gas drilling, servicing and related labourers", 
+775,I216,Logging and forestry labourers,NC, ,8616,Logging and forestry labourers, 
+779,J011,"Supervisors, mineral and metal processing",NC, ,9211,"Supervisors, mineral and metal processing", 
+780,J012,"Supervisors, petroleum, gas and chemical processing and utilities",NC, ,9212,"Supervisors, petroleum, gas and chemical processing and utilities", 
+781,J013,"Supervisors, food, beverage and tobacco processing",NC/T, ,9213,"Supervisors, food, beverage and associated products processing", 
+782,J014,"Supervisors, plastic and rubber products manufacturing",NC, ,9214,"Supervisors, plastic and rubber products manufacturing", 
+783,J015,"Supervisors, forest products processing",NC, ,9215,"Supervisors, forest products processing", 
+784,J016,"Supervisors, textile processing",NU,*,9217,"Supervisors, textile, fabric, fur and leather products processing and manufacturing","Supervisors, textile processing"
+787,J021,"Supervisors, motor vehicle assembling",NC, ,9221,"Supervisors, motor vehicle assembling", 
+788,J022,"Supervisors, electronics manufacturing",NC, ,9222,"Supervisors, electronics manufacturing", 
+789,J023,"Supervisors, electrical products manufacturing",NC, ,9223,"Supervisors, electrical products manufacturing", 
+790,J024,"Supervisors, furniture and fixtures manufacturing",NC, ,9224,"Supervisors, furniture and fixtures manufacturing", 
+791,J025,"Supervisors, fabric, fur and leather products manufacturing",NU,*,9217,"Supervisors, textile, fabric, fur and leather products processing and manufacturing","Supervisors, fabric, fur and leather products manufacturing"
+792,J026,"Supervisors, other mechanical and metal products manufacturing",NC, ,9226,"Supervisors, other mechanical and metal products manufacturing", 
+793,J027,"Supervisors, other products manufacturing and assembly",NC, ,9227,"Supervisors, other products manufacturing and assembly", 
+799,J111,"Central control and process operators, mineral and metal processing",NC, ,9231,"Central control and process operators, mineral and metal processing", 
+800,J112,"Petroleum, gas and chemical process operators",NC, ,9232,"Petroleum, gas and chemical process operators", 
+801,J113,Pulping control operators,NU,*,9235,"Pulping, papermaking and coating control operators",Pulping technicians and control operators
+802,J113,Pulping control operators,NU,*,9432,Pulp mill machine operators,Pulp and paper digester and related machine operators
+803,J114,Papermaking and coating control operators,NU,*,9235,"Pulping, papermaking and coating control operators",Papermaking and coating control operators
+804,J114,Papermaking and coating control operators,NU,*,9433,Papermaking and finishing machine operators,Paper coating and related machine operators
+806,J121,"Machine operators, mineral and metal processing",NC, ,9411,"Machine operators, mineral and metal processing", 
+807,J122,Foundry workers,NC, ,9412,Foundry workers, 
+808,J123,Glass forming and finishing machine operators and glass cutters,NC, ,9413,Glass forming and finishing machine operators and glass cutters, 
+809,J124,"Concrete, clay and stone forming operators",NC, ,9414,"Concrete, clay and stone forming operators", 
+810,J125,"Inspectors and testers, mineral and metal processing",NC, ,9415,"Inspectors and testers, mineral and metal processing", 
+813,J131,Chemical plant machine operators,NC, ,9421,Chemical plant machine operators, 
+814,J132,Plastics processing machine operators,NC, ,9422,Plastics processing machine operators, 
+815,J133,Rubber processing machine operators and related workers,NC, ,9423,Rubber processing machine operators and related workers, 
+816,J134,Water and waste plant operators,NC/T, ,9243,Water and waste treatment plant operators, 
+818,J141,Sawmill machine operators,NC, ,9431,Sawmill machine operators, 
+819,J142,Pulp mill machine operators,NU,*,9432,Pulp mill machine operators,Except pulp and paper digester and related machine operators
+820,J143,Papermaking and finishing machine operators,NU,*,9433,Papermaking and finishing machine operators,Except paper coating and related machine operators
+821,J144,Other wood processing machine operators,NC, ,9434,Other wood processing machine operators, 
+822,J145,Paper converting machine operators,NC, ,9435,Paper converting machine operators, 
+823,J146,Lumber graders and other wood processing inspectors and graders,NC, ,9436,Lumber graders and other wood processing inspectors and graders, 
+825,J151,Textile fibre and yarn preparation machine operators,NU,*,9441,"Textile fibre and yarn, hide and pelt processing machine operators and workers",Textile fibre and yarn preparation machine operators
+826,J152,"Weavers, knitters and other fabric-making occupations",NC/T, ,9442,"Weavers, knitters and other fabric making occupations", 
+827,J153,Textile dyeing and finishing machine operators,NU,*,9441,"Textile fibre and yarn, hide and pelt processing machine operators and workers",Textile dyeing and finishing machine operators
+828,J154,"Textile inspectors, graders and samplers",NU,*,9447,"Inspectors and graders, textile, fabric, fur and leather products manufacturing","Textile inspectors, graders and samplers"
+830,J161,Sewing machine operators,NC/T, ,9446,Industrial sewing machine operators, 
+831,J162,"Fabric, fur and leather cutters",NC, ,9445,"Fabric, fur and leather cutters", 
+832,J163,Hide and pelt processing workers,NU,*,9441,"Textile fibre and yarn, hide and pelt processing machine operators and workers",Hide and pelt processing workers
+833,J164,"Inspectors and testers, fabric, fur and leather products manufacturing",NU,*,9447,"Inspectors and graders, textile, fabric, fur and leather products manufacturing","Inspectors and testers, fabric, fur and leather products manufacturing"
+835,J171,"Process control and machine operators, food and beverage processing",NU,*,9461,"Process control and machine operators, food, beverage and associated products processing",Except tobacco processing machine operators
+836,J172,"Industrial butchers and meat cutters, poultry preparers and related workers",NC, ,9462,"Industrial butchers and meat cutters, poultry preparers and related workers", 
+837,J173,Fish plant workers,NC/T, ,9463,Fish and seafood plant workers, 
+838,J174,Tobacco processing machine operators,NU,*,9461,"Process control and machine operators, food, beverage and associated products processing",Tobacco processing machine operators
+839,J175,"Testers and graders, food and beverage processing",NC/T, ,9465,"Testers and graders, food, beverage and associated products processing", 
+841,J181,Printing machine operators,NC/T, ,9471,Plateless printing equipment operators, 
+842,J182,"Camera, platemaking and other prepress occupations",NC, ,9472,"Camera, platemaking and other prepress occupations", 
+843,J183,Binding and finishing machine operators,NC, ,9473,Binding and finishing machine operators, 
+844,J184,Photographic and film processors,NC, ,9474,Photographic and film processors, 
+848,J191,Machining tool operators,NC, ,9417,Machining tool operators, 
+849,J192,Forging machine operators,NU,*,9416,Metalworking and forging machine operators,Forging machine operators
+850,J193,Woodworking machine operators,NC, ,9437,Woodworking machine operators, 
+851,J194,Metalworking machine operators,NU,*,9416,Metalworking and forging machine operators,Metalworking machine operators
+852,J196,Other metal products machine operators,NC, ,9418,Other metal products machine operators, 
+853,J197,Other products machine operators,NU,*,9537,"Other products assemblers, finishers and inspectors",Other products machine operators
+856,J211,Aircraft assemblers and aircraft assembly inspectors,NC, ,9521,Aircraft assemblers and aircraft assembly inspectors, 
+857,J212,"Motor vehicle assemblers, inspectors and testers",NC, ,9522,"Motor vehicle assemblers, inspectors and testers", 
+858,J213,"Electronics assemblers, fabricators, inspectors and testers",NC, ,9523,"Electronics assemblers, fabricators, inspectors and testers", 
+859,J214,"Assemblers and inspectors, electrical appliance, apparatus and equipment manufacturing",NC, ,9524,"Assemblers and inspectors, electrical appliance, apparatus and equipment manufacturing", 
+860,J215,"Assemblers, fabricators and inspectors, industrial electrical motors and transformers",NC, ,9525,"Assemblers, fabricators and inspectors, industrial electrical motors and transformers", 
+861,J216,Mechanical assemblers and inspectors,NC, ,9526,Mechanical assemblers and inspectors, 
+862,J217,"Machine operators and inspectors, electrical apparatus manufacturing",NC, ,9527,"Machine operators and inspectors, electrical apparatus manufacturing", 
+864,J221,Boat assemblers and inspectors,NC, ,9531,Boat assemblers and inspectors, 
+865,J222,Furniture and fixture assemblers and inspectors,NC, ,9532,Furniture and fixture assemblers and inspectors, 
+866,J223,Other wood products assemblers and inspectors,NC, ,9533,Other wood products assemblers and inspectors, 
+867,J224,Furniture finishers and refinishers,NC, ,9534,Furniture finishers and refinishers, 
+868,J225,"Plastic products assemblers, finishers and inspectors",NC, ,9535,"Plastic products assemblers, finishers and inspectors", 
+869,J226,Painters and coaters - industrial,NU,*,9536,"Industrial painters, coaters and metal finishing process operators",Industrial painters and coaters
+870,J227,"Plating, metal spraying and related operators",NU,*,9536,"Industrial painters, coaters and metal finishing process operators",Industrial metal finishing process operators
+871,J228,Other assemblers and inspectors,NU,*,9537,"Other products assemblers, finishers and inspectors",Other assemblers and inspectors
+874,J311,Labourers in mineral and metal processing,NC, ,9611,Labourers in mineral and metal processing, 
+875,J312,Labourers in metal fabrication,NC, ,9612,Labourers in metal fabrication, 
+876,J313,Labourers in chemical products processing and utilities,NC, ,9613,Labourers in chemical products processing and utilities, 
+877,J314,"Labourers in wood, pulp and paper processing",NC, ,9614,"Labourers in wood, pulp and paper processing", 
+878,J315,Labourers in rubber and plastic products manufacturing,NC, ,9615,Labourers in rubber and plastic products manufacturing, 
+879,J316,Labourers in textile processing,NC, ,9616,Labourers in textile processing, 
+880,J317,"Labourers in food, beverage and tobacco processing",NC/T, ,9617,"Labourers in food, beverage and associated products processing", 
+881,J318,Labourers in fish processing,NC/T, ,9618,Labourers in fish and seafood processing, 
+882,J319,"Other labourers in processing, manufacturing and utilities",NC, ,9619,"Other labourers in processing, manufacturing and utilities", 

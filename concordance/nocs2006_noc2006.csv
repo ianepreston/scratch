@@ -1,0 +1,521 @@
+,noc_s2006_code,noc_2006_code,title
+2,A011,0011,Legislators
+3,A012,0012,Senior Government Managers and Officials
+4,A013,0013,"Senior Managers - Financial, Communications and Other Business Services"
+5,A014,0014,"Senior Managers - Health, Education, Social and Community Services and Membership Organizations"
+6,A015,0015,"Senior Managers - Trade, Broadcasting and Other Services, n.e.c."
+7,A016,0016,"Senior Managers - Goods Production, Utilities, Transportation and Construction"
+9,A111,0111,Financial Managers
+10,A112,0112,Human Resources Managers
+11,A113,0113,Purchasing Managers
+12,A114,0114,Other Administrative Services Managers
+14,A121,0211,Engineering Managers
+15,A122,0213,Computer and Information Systems Managers
+16,A123,0212,Architecture and Science Managers
+18,A131,0611,"Sales, Marketing and Advertising Managers"
+20,A141,0721,Facility Operation and Maintenance Managers
+22,A211,0621,Retail Trade Managers
+24,A221,0631,Restaurant and Food Service Managers
+25,A222,0632,Accommodation Service Managers
+27,A301,0121,"Insurance, Real Estate and Financial Brokerage Managers"
+28,A302,0122,"Banking, Credit and Other Investment Managers"
+29,A303,0123,Other Business Services Managers
+31,A311,0131,Telecommunication Carriers Managers
+32,A312,0132,Postal and Courier Services Managers
+34,A321,0311,Managers in Health Care
+35,A322,0312,Administrators - Post-Secondary Education and Vocational Training
+36,A323,0313,School Principals and Administrators of Elementary and Secondary Education
+37,A324,0314,"Managers in Social, Community and Correctional Services"
+39,A331,0411,Government Managers - Health and Social Policy Development and Program Administration
+40,A332,0412,"Government Managers - Economic Analysis, Policy Development and Program Administration"
+41,A333,0413,Government Managers - Education Policy Development and Program Administration
+42,A334,0414,Other Managers in Public Administration
+44,A341,0511,"Library, Archive, Museum and Art Gallery Managers"
+45,A342,0512,"Managers - Publishing, Motion Pictures, Broadcasting and Performing Arts"
+46,A343,0513,"Recreation, Sports and Fitness Program and Service Directors"
+48,A351,0641,Commissioned Police Officers
+49,A352,0642,Fire Chiefs and Senior Firefighting Officers
+50,A353,0643,"Commissioned Officers, Armed Forces"
+52,A361,0651,Other Services Managers
+54,A371,0711,Construction Managers
+55,A372,0712,Residential Home Builders and Renovators
+56,A373,0713,Transportation Managers
+58,A381,0811,Primary Production Managers (Except Agriculture)
+60,A391,0911,Manufacturing Managers
+61,A392,0912,Utilities Managers
+63,B011,1111,Financial Auditors and Accountants
+64,B012,1112,Financial and Investment Analysts
+65,B013,1113,"Securities Agents, Investment Dealers and Brokers"
+66,B014,1114,Other Financial Officers
+68,B021,1121,Specialists in Human Resources
+69,B022,1122,Professional Occupations in Business Services to Management
+71,B111,1231,Bookkeepers
+72,B112,1232,Loan Officers
+73,B113,1233,Insurance Adjusters and Claims Examiners
+74,B114,1234,Insurance Underwriters
+75,B115,1235,"Assessors, Valuators and Appraisers"
+76,B116,1236,"Customs, Ship and Other Brokers"
+78,B211,1241,Secretaries (Except Legal and Medical)
+79,B212,1242,Legal Secretaries
+80,B213,1243,Medical Secretaries
+81,B214,1244,Court Recorders and Medical Transcriptionists
+83,B311,1221,Administrative Officers
+84,B312,1222,Executive Assistants
+85,B313,1223,Personnel and Recruitment Officers
+86,B314,1224,Property Administrators
+87,B315,1225,Purchasing Agents and Officers
+88,B316,1226,Conference and Event Planners
+89,B317,1227,Court Officers and Justices of the Peace
+90,B318,1228,"Immigration, Employment Insurance and Revenue Officers"
+92,B411,1211,"Supervisors, General Office and Administrative Support Clerks"
+93,B412,1212,"Supervisors, Finance and Insurance Clerks"
+94,B413,1213,"Supervisors, Library, Correspondence and Related Information Clerks"
+95,B414,1214,"Supervisors, Mail and Message Distribution Occupations"
+96,B415,1215,"Supervisors, Recording, Distributing and Scheduling Occupations"
+98,B511,1411,General Office Clerks
+99,B513,1413,Records Management and Filing Clerks
+100,B514,1414,Receptionists and Switchboard Operators
+102,B522,1422,Data Entry Clerks
+103,B523,1423,Desktop Publishing Operators and Related Occupations
+104,B524,1424,Telephone Operators
+106,B531,1431,Accounting and Related Clerks
+107,B532,1432,Payroll Clerks
+108,B533,1433,Customer Service Representatives - Financial Services
+109,B534,1434,"Banking, Insurance and Other Financial Clerks"
+110,B535,1435,Collectors
+112,B541,1441,Administrative Clerks
+113,B542,1442,Personnel Clerks
+114,B543,1443,Court Clerks
+116,B551,1451,Library Clerks
+117,B552,1452,"Correspondence, Publication and Related Clerks"
+118,B553,1453,"Customer Service, Information and Related Clerks"
+119,B554,1454,Survey Interviewers and Statistical Clerks
+121,B561,1461,"Mail, Postal and Related Clerks"
+122,B562,1462,Letter Carriers
+123,B563,1463,"Couriers, Messengers and Door-to-Door Distributors"
+125,B571,1471,Shippers and Receivers
+126,B572,1472,Storekeepers and Parts Clerks
+127,B573,1473,Production Clerks
+128,B574,1474,Purchasing and Inventory Clerks
+129,B575,1475,Dispatchers and Radio Operators
+130,B576,1476,Transportation Route and Crew Schedulers
+132,C011,2111,Physicists and Astronomers
+133,C012,2112,Chemists
+134,C013,2113,"Geologists, Geochemists and Geophysicists"
+135,C014,2114,Meteorologists
+136,C015,2115,Other Professional Occupations in Physical Sciences
+138,C021,2121,Biologists and Related Scientists
+139,C022,2122,Forestry Professionals
+140,C023,2123,"Agricultural Representatives, Consultants and Specialists"
+142,C031,2131,Civil Engineers
+143,C032,2132,Mechanical Engineers
+144,C033,2133,Electrical and Electronics Engineers
+145,C034,2134,Chemical Engineers
+147,C041,2141,Industrial and Manufacturing Engineers
+148,C042,2142,Metallurgical and Materials Engineers
+149,C043,2143,Mining Engineers
+150,C044,2144,Geological Engineers
+151,C045,2145,Petroleum Engineers
+152,C046,2146,Aerospace Engineers
+153,C047,2147,Computer Engineers (Except Software Engineers and Designers)
+154,C048,2148,"Other Professional Engineers, n.e.c."
+156,C051,2151,Architects
+157,C052,2152,Landscape Architects
+158,C053,2153,Urban and Land Use Planners
+159,C054,2154,Land Surveyors
+161,C061,2161,"Mathematicians, Statisticians and Actuaries"
+163,C071,2171,Information Systems Analysts and Consultants
+164,C072,2172,Database Analysts and Data Administrators
+165,C073,2173,Software Engineers and Designers
+166,C074,2174,Computer Programmers and Interactive Media Developers
+167,C075,2175,Web Designers and Developers
+169,C111,2211,Chemical Technologists and Technicians
+170,C112,2212,Geological and Mineral Technologists and Technicians
+171,C113,2213,Meteorological Technicians
+173,C121,2221,Biological Technologists and Technicians
+174,C122,2222,Agricultural and Fish Products Inspectors
+175,C123,2223,Forestry Technologists and Technicians
+176,C124,2224,Conservation and Fishery Officers
+177,C125,2225,Landscape and Horticulture Technicians and Specialists
+179,C131,2231,Civil Engineering Technologists and Technicians
+180,C132,2232,Mechanical Engineering Technologists and Technicians
+181,C133,2233,Industrial Engineering and Manufacturing Technologists and Technicians
+182,C134,2234,Construction Estimators
+184,C141,2241,Electrical and Electronics Engineering Technologists and Technicians
+185,C142,2242,Electronic Service Technicians (Household and Business Equipment)
+186,C143,2243,Industrial Instrument Technicians and Mechanics
+187,C144,2244,"Aircraft Instrument, Electrical and Avionics Mechanics, Technicians and Inspectors"
+189,C151,2251,Architectural Technologists and Technicians
+190,C152,2252,Industrial Designers
+191,C153,2253,Drafting Technologists and Technicians
+192,C154,2254,Land Survey Technologists and Technicians
+193,C155,2255,Mapping and Related Technologists and Technicians
+195,C161,2261,Non-Destructive Testers and Inspectors
+196,C162,2262,Engineering Inspectors and Regulatory Officers
+197,C163,2263,Inspectors in Public and Environmental Health and Occupational Health and Safety
+198,C164,2264,Construction Inspectors
+200,C171,2271,"Air Pilots, Flight Engineers and Flying Instructors"
+201,C172,2272,Air Traffic Control and Related Occupations
+202,C173,2273,"Deck Officers, Water Transport"
+203,C174,2274,"Engineer Officers, Water Transport"
+204,C175,2275,Railway Traffic Controllers and Marine Traffic Regulators
+206,C181,2281,Computer Network Technicians
+207,C182,2282,User Support Technicians
+208,C183,2283,Systems Testing Technicians
+210,D011,3111,Specialist Physicians
+211,D012,3112,General Practitioners and Family Physicians
+212,D013,3113,Dentists
+213,D014,3114,Veterinarians
+215,D021,3121,Optometrists
+216,D022,3122,Chiropractors
+217,D023,3123,Other Professional Occupations in Health Diagnosing and Treating
+219,D031,3131,Pharmacists
+220,D032,3132,Dietitians and Nutritionists
+222,D041,3141,Audiologists and Speech-Language Pathologists
+223,D042,3142,Physiotherapists
+224,D043,3143,Occupational Therapists
+225,D044,3144,Other Professional Occupations in Therapy and Assessment
+227,D111,3151,Head Nurses and Supervisors
+228,D112,3152,Registered Nurses
+230,D211,3211,Medical Laboratory Technologists and Pathologists' Assistants
+231,D212,3212,Medical Laboratory Technicians
+232,D213,3213,Veterinary and Animal Health Technologists and Technicians
+233,D214,3214,"Respiratory Therapists, Clinical Perfusionists and Cardiopulmonary Technologists"
+234,D215,3215,Medical Radiation Technologists
+235,D216,3216,Medical Sonographers
+236,D217,3217,Cardiology Technologists
+237,D218,3218,"Electroencephalographic and Other Diagnostic Technologists, n.e.c."
+238,D219,3219,Other Medical Technologists and Technicians (Except Dental Health)
+240,D221,3221,Denturists
+241,D222,3222,Dental Hygienists and Dental Therapists
+242,D223,3223,"Dental Technologists, Technicians and Laboratory Bench Workers"
+244,D231,3231,Opticians
+245,D232,3232,Midwives and Practitioners of Natural Healing
+246,D233,3233,Licensed Practical Nurses
+247,D234,3234,Ambulance Attendants and Other Paramedical Occupations
+248,D235,3235,Other Technical Occupations in Therapy and Assessment
+250,D311,3411,Dental Assistants
+251,D312,3413,"Nurse Aides, Orderlies and Patient Service Associates"
+252,D313,3414,Other Assisting Occupations in Support of Health Services
+254,E011,4111,Judges
+255,E012,4112,Lawyers and Quebec Notaries
+257,E021,4151,Psychologists
+258,E022,4152,Social Workers
+259,E023,4153,"Family, Marriage and Other Related Counsellors"
+260,E024,4154,Ministers of Religion
+261,E025,4155,Probation and Parole Officers and Related Occupations
+263,E031,4161,"Natural and Applied Science Policy Researchers, Consultants and Program Officers"
+264,E032,4162,Economists and Economic Policy Researchers and Analysts
+265,E033,4163,Business Development Officers and Marketing Researchers and Consultants
+266,E034,4164,"Social Policy Researchers, Consultants and Program Officers"
+267,E035,4166,"Education Policy Researchers, Consultants and Program Officers"
+268,E036,4167,"Recreation, Sports and Fitness Program Supervisors and Consultants"
+269,E037,4168,Program Officers Unique to Government
+270,E038,4169,"Other Professional Occupations in Social Science, n.e.c."
+271,E039,4165,"Health Policy Researchers, Consultants and Program Officers"
+273,E111,4121,University Professors
+274,E112,4122,Post-Secondary Teaching and Research Assistants
+276,E121,4131,College and Other Vocational Instructors
+278,E131,4141,Secondary School Teachers
+279,E132,4142,Elementary School and Kindergarten Teachers
+280,E133,4143,Educational Counsellors
+282,E211,4211,Paralegal and Related Occupations
+283,E212,4212,Community and Social Service Workers
+284,E213,4213,Employment Counsellors
+285,E214,4215,Instructors and Teachers of Persons with Disabilities
+286,E215,4216,Other Instructors
+287,E216,4217,Other Religious Occupations
+288,E217,4214,Early Childhood Educators and Assistants
+290,F011,5111,Librarians
+291,F012,5112,Conservators and Curators
+292,F013,5113,Archivists
+294,F021,5121,Authors and Writers
+295,F022,5122,Editors
+296,F023,5123,Journalists
+297,F024,5124,Professional Occupations in Public Relations and Communications
+298,F025,5125,"Translators, Terminologists and Interpreters"
+300,F031,5131,"Producers, Directors, Choreographers and Related Occupations"
+301,F032,5132,"Conductors, Composers and Arrangers"
+302,F033,5133,Musicians and Singers
+303,F034,5134,Dancers
+304,F035,5135,Actors and Comedians
+305,F036,5136,"Painters, Sculptors and Other Visual Artists"
+307,F111,5211,Library and Archive Technicians and Assistants
+308,F112,5212,Technical Occupations Related to Museums and Art Galleries
+310,F121,5221,Photographers
+311,F122,5222,Film and Video Camera Operators
+312,F123,5223,Graphic Arts Technicians
+313,F124,5224,Broadcast Technicians
+314,F125,5225,Audio and Video Recording Technicians
+315,F126,5226,"Other Technical and Co-ordinating Occupations in Motion Pictures, Broadcasting and the Performing Arts"
+316,F127,5227,"Support Occupations in Motion Pictures, Broadcasting and the Performing Arts"
+318,F131,5231,Announcers and Other Broadcasters
+319,F132,5232,Other Performers
+321,F141,5241,Graphic Designers and Illustrators
+322,F142,5242,Interior Designers
+323,F143,5243,"Theatre, Fashion, Exhibit and Other Creative Designers"
+324,F144,5244,Artisans and Craftspersons
+325,F145,5245,"Patternmakers - Textile, Leather and Fur Products"
+327,F151,5251,Athletes
+328,F152,5252,Coaches
+329,F153,5253,Sports Officials and Referees
+330,F154,5254,"Program Leaders and Instructors in Recreation, Sport and Fitness"
+332,G011,6211,Retail Trade Supervisors
+333,G012,6212,Food Service Supervisors
+334,G013,6213,Executive Housekeepers
+335,G014,6214,Dry Cleaning and Laundry Supervisors
+336,G015,6215,Cleaning Supervisors
+337,G016,6216,Other Service Supervisors
+339,G111,6411,Sales Representatives - Wholesale Trade (Non-Technical)
+341,G121,6221,Technical Sales Specialists - Wholesale Trade
+343,G131,6231,Insurance Agents and Brokers
+344,G132,6232,Real Estate Agents and Salespersons
+345,G133,6233,Retail and Wholesale Buyers
+346,G134,6234,Grain Elevator Operators
+348,G211,6421,Retail Salespersons and Sales Clerks
+350,G311,6611,Cashiers
+352,G411,6241,Chefs
+353,G412,6242,Cooks
+355,G511,6451,Maîtres d'hôtel and Hosts/Hostesses
+356,G512,6452,Bartenders
+357,G513,6453,Food and Beverage Servers
+359,G611,6261,Police Officers (Except Commissioned)
+360,G612,6262,Firefighters
+362,G621,6461,Sheriffs and Bailiffs
+363,G622,6462,Correctional Service Officers
+364,G623,6463,"By-Law Enforcement and Other Regulatory Officers, n.e.c."
+365,G624,6464,"Other Ranks, Armed Forces"
+366,G625,6465,Other Protective Service Occupations
+368,G631,6651,Security Guards and Related Occupations
+370,G711,6431,Travel Counsellors
+371,G712,6432,Pursers and Flight Attendants
+372,G713,6433,Airline Sales and Service Agents
+373,G714,6434,"Ticket Agents, Cargo Service Representatives and Related Clerks (Except Airline)"
+374,G715,6435,Hotel Front Desk Clerks
+376,G721,6441,Tour and Travel Guides
+377,G722,6442,Outdoor Sport and Recreational Guides
+378,G723,6443,Casino Occupations
+380,G731,6671,"Operators and Attendants in Amusement, Recreation and Sport"
+381,G732,6672,Other Attendants in Accommodation and Travel
+383,G811,6471,"Visiting Homemakers, Housekeepers and Related Occupations"
+384,G812,6472,Elementary and Secondary School Teacher Assistants
+385,G814,6474,"Babysitters, Nannies and Parents' Helpers"
+387,G911,6271,Hairstylists and Barbers
+388,G912,6272,Funeral Directors and Embalmers
+390,G921,6481,"Image, Social and Other Personal Consultants"
+391,G922,6482,"Estheticians, Electrologists and Related Occupations"
+392,G923,6483,Pet Groomers and Animal Care Workers
+393,G924,6484,Other Personal Service Occupations
+395,G931,6661,Light Duty Cleaners
+396,G932,6662,Specialized Cleaners
+397,G933,6663,"Janitors, Caretakers and Building Superintendents"
+399,G941,6251,"Butchers, Meat Cutters and Fishmongers - Retail and Wholesale"
+400,G942,6252,Bakers
+402,G961,6641,"Food Counter Attendants, Kitchen Helpers and Related Occupations"
+404,G971,6621,Service Station Attendants
+405,G972,6622,Grocery Clerks and Store Shelf Stockers
+406,G973,6623,Other Elemental Sales Occupations
+408,G981,6681,Dry Cleaning and Laundry Occupations
+409,G982,6682,"Ironing, Pressing and Finishing Occupations"
+410,G983,6683,Other Elemental Service Occupations
+412,H011,7211,"Supervisors, Machinists and Related Occupations"
+413,H012,7212,"Contractors and Supervisors, Electrical Trades and Telecommunications Occupations"
+414,H013,7213,"Contractors and Supervisors, Pipefitting Trades"
+415,H014,7214,"Contractors and Supervisors, Metal Forming, Shaping and Erecting Trades"
+416,H015,7215,"Contractors and Supervisors, Carpentry Trades"
+417,H016,7216,"Contractors and Supervisors, Mechanic Trades"
+418,H017,7217,"Contractors and Supervisors, Heavy Construction Equipment Crews"
+419,H018,7218,"Supervisors, Printing and Related Occupations"
+420,H019,7219,"Contractors and Supervisors, Other Construction Trades, Installers, Repairers and Servicers"
+422,H021,7221,"Supervisors, Railway Transport Operations"
+423,H022,7222,"Supervisors, Motor Transport and Other Ground Transit Operators"
+425,H111,7251,Plumbers
+426,H112,7252,"Steamfitters, Pipefitters and Sprinkler System Installers"
+427,H113,7253,Gas Fitters
+429,H121,7271,Carpenters
+430,H122,7272,Cabinetmakers
+432,H131,7281,Bricklayers
+433,H132,7282,Concrete Finishers
+434,H133,7283,Tilesetters
+435,H134,7284,"Plasterers, Drywall Installers and Finishers and Lathers"
+437,H141,7291,Roofers and Shinglers
+438,H142,7292,Glaziers
+439,H143,7293,Insulators
+440,H144,7294,Painters and Decorators
+441,H145,7295,Floor Covering Installers
+443,H211,7241,Electricians (Except Industrial and Power System)
+444,H212,7242,Industrial Electricians
+445,H213,7243,Power System Electricians
+446,H214,7244,Electrical Power Line and Cable Workers
+447,H215,7245,Telecommunications Line and Cable Workers
+448,H216,7246,Telecommunications Installation and Repair Workers
+449,H217,7247,Cable Television Service and Maintenance Technicians
+451,H221,7351,Stationary Engineers and Auxiliary Equipment Operators
+452,H222,7352,Power Systems and Power Station Operators
+454,H311,7231,Machinists and Machining and Tooling Inspectors
+455,H312,7232,Tool and Die Makers
+457,H321,7261,Sheet Metal Workers
+458,H322,7262,Boilermakers
+459,H323,7263,Structural Metal and Platework Fabricators and Fitters
+460,H324,7264,Ironworkers
+461,H325,7266,Blacksmiths and Die Setters
+462,H326,7265,Welders and Related Machine Operators
+464,H411,7311,Construction Millwrights and Industrial Mechanics (Except Textile)
+465,H412,7312,Heavy-Duty Equipment Mechanics
+466,H413,7313,Refrigeration and Air Conditioning Mechanics
+467,H414,7314,Railway Carmen/women
+468,H415,7315,Aircraft Mechanics and Aircraft Inspectors
+469,H416,7316,Machine Fitters
+470,H417,7317,Textile Machinery Mechanics and Repairers
+471,H418,7318,Elevator Constructors and Mechanics
+473,H421,7321,"Automotive Service Technicians, Truck and Bus Mechanics and Mechanical Repairers"
+474,H422,7322,Motor Vehicle Body Repairers
+476,H431,7331,Oil and Solid Fuel Heating Mechanics
+477,H432,7332,Electric Appliance Servicers and Repairers
+478,H433,7333,Electrical Mechanics
+479,H434,7334,Motorcycle and Other Related Mechanics
+480,H435,7335,Other Small Engine and Equipment Mechanics
+482,H511,7341,Upholsterers
+483,H512,7342,"Tailors, Dressmakers, Furriers and Milliners"
+484,H513,7343,Shoe Repairers and Shoemakers
+485,H514,7344,"Jewellers, Watch Repairers and Related Occupations"
+487,H521,7381,Printing Press Operators
+488,H522,7382,Commercial Divers
+489,H523,7383,Other Trades and Related Occupations
+491,H531,7441,Residential and Commercial Installers and Servicers
+492,H532,7442,Waterworks and Gas Maintenance Workers
+493,H533,7443,Automotive Mechanical Installers and Servicers
+494,H534,7444,Pest Controllers and Fumigators
+495,H535,7445,Other Repairers and Servicers
+497,H611,7421,Heavy Equipment Operators (Except Crane)
+498,H612,7422,Public Works Maintenance Equipment Operators
+500,H621,7371,Crane Operators
+501,H622,7372,"Drillers and Blasters - Surface Mining, Quarrying and Construction"
+502,H623,7373,Water Well Drillers
+504,H711,7411,Truck Drivers
+505,H712,7412,"Bus Drivers, Subway Operators and Other Transit Operators"
+506,H713,7413,Taxi and Limousine Drivers and Chauffeurs
+507,H714,7414,Delivery and Courier Service Drivers
+509,H721,7361,Railway and Yard Locomotive Engineers
+510,H722,7362,Railway Conductors and Brakemen/women
+512,H731,7431,Railway Yard Workers
+513,H732,7432,Railway Track Maintenance Workers
+514,H733,7433,"Deck Crew, Water Transport"
+515,H734,7434,"Engine Room Crew, Water Transport"
+516,H735,7435,Lock and Cable Ferry Operators and Related Occupations
+517,H736,7436,Boat Operators
+518,H737,7437,Air Transport Ramp Attendants
+520,H811,7451,Longshore Workers
+521,H812,7452,Material Handlers
+523,H821,7611,Construction Trades Helpers and Labourers
+524,H822,7612,Other Trades Helpers and Labourers
+526,H831,7621,Public Works and Maintenance Labourers
+527,H832,7622,Railway and Motor Transport Labourers
+529,I011,8251,Farmers and Farm Managers
+530,I012,8252,Agricultural and Related Service Contractors and Managers
+531,I013,8253,Farm Supervisors and Specialized Livestock Workers
+532,I014,8254,Nursery and Greenhouse Operators and Managers
+533,I015,8255,Landscaping and Grounds Maintenance Contractors and Managers
+534,I016,8256,"Supervisors, Landscape and Horticulture"
+535,I017,8257,Aquaculture Operators and Managers
+537,I021,8431,General Farm Workers
+538,I022,8432,Nursery and Greenhouse Workers
+540,I111,8211,"Supervisors, Logging and Forestry"
+542,I121,8221,"Supervisors, Mining and Quarrying"
+543,I122,8222,"Supervisors, Oil and Gas Drilling and Service"
+545,I131,8231,Underground Production and Development Miners
+546,I132,8232,"Oil and Gas Well Drillers, Servicers, Testers and Related Workers"
+548,I141,8411,Underground Mine Service and Support Workers
+549,I142,8412,Oil and Gas Well Drilling Workers and Services Operators
+551,I151,8241,Logging Machinery Operators
+553,I161,8421,Chain Saw and Skidder Operators
+554,I162,8422,Silviculture and Forestry Workers
+556,I171,8261,Fishing Masters and Officers
+557,I172,8262,Fishing Vessel Skippers and Fishermen/women
+559,I181,8441,Fishing Vessel Deckhands
+560,I182,8442,Trappers and Hunters
+562,I211,8611,Harvesting Labourers
+563,I212,8612,Landscaping and Grounds Maintenance Labourers
+564,I213,8613,Aquaculture and Marine Harvest Labourers
+565,I214,8614,Mine Labourers
+566,I215,8615,"Oil and Gas Drilling, Servicing and Related Labourers"
+567,I216,8616,Logging and Forestry Labourers
+569,J011,9211,"Supervisors, Mineral and Metal Processing"
+570,J012,9212,"Supervisors, Petroleum, Gas and Chemical Processing and Utilities"
+571,J013,9213,"Supervisors, Food, Beverage and Tobacco Processing"
+572,J014,9214,"Supervisors, Plastic and Rubber Products Manufacturing"
+573,J015,9215,"Supervisors, Forest Products Processing"
+574,J016,9216,"Supervisors, Textile Processing"
+576,J021,9221,"Supervisors, Motor Vehicle Assembling"
+577,J022,9222,"Supervisors, Electronics Manufacturing"
+578,J023,9223,"Supervisors, Electrical Products Manufacturing"
+579,J024,9224,"Supervisors, Furniture and Fixtures Manufacturing"
+580,J025,9225,"Supervisors, Fabric, Fur and Leather Products Manufacturing"
+581,J026,9226,"Supervisors, Other Mechanical and Metal Products Manufacturing"
+582,J027,9227,"Supervisors, Other Products Manufacturing and Assembly"
+584,J111,9231,"Central Control and Process Operators, Mineral and Metal Processing"
+585,J112,9232,"Petroleum, Gas and Chemical Process Operators"
+586,J113,9233,Pulping Control Operators
+587,J114,9234,Papermaking and Coating Control Operators
+589,J121,9411,"Machine Operators, Mineral and Metal Processing"
+590,J122,9412,Foundry Workers
+591,J123,9413,Glass Forming and Finishing Machine Operators and Glass Cutters
+592,J124,9414,"Concrete, Clay and Stone Forming Operators"
+593,J125,9415,"Inspectors and Testers, Mineral and Metal Processing"
+595,J131,9421,Chemical Plant Machine Operators
+596,J132,9422,Plastics Processing Machine Operators
+597,J133,9423,Rubber Processing Machine Operators and Related Workers
+598,J134,9424,Water and Waste Plant Operators
+600,J141,9431,Sawmill Machine Operators
+601,J142,9432,Pulp Mill Machine Operators
+602,J143,9433,Papermaking and Finishing Machine Operators
+603,J144,9434,Other Wood Processing Machine Operators
+604,J145,9435,Paper Converting Machine Operators
+605,J146,9436,Lumber Graders and Other Wood Processing Inspectors and Graders
+607,J151,9441,Textile Fibre and Yarn Preparation Machine Operators
+608,J152,9442,"Weavers, Knitters and Other Fabric-Making Occupations"
+609,J153,9443,Textile Dyeing and Finishing Machine Operators
+610,J154,9444,"Textile Inspectors, Graders and Samplers"
+612,J161,9451,Sewing Machine Operators
+613,J162,9452,"Fabric, Fur and Leather Cutters"
+614,J163,9453,Hide and Pelt Processing Workers
+615,J164,9454,"Inspectors and Testers, Fabric, Fur and Leather Products Manufacturing"
+617,J171,9461,"Process Control and Machine Operators, Food and Beverage Processing"
+618,J172,9462,"Industrial Butchers and Meat Cutters, Poultry Preparers and Related Workers"
+619,J173,9463,Fish Plant Workers
+620,J174,9464,Tobacco Processing Machine Operators
+621,J175,9465,"Testers and Graders, Food and Beverage Processing"
+623,J181,9471,Printing Machine Operators
+624,J182,9472,"Camera, Platemaking and Other Prepress Occupations"
+625,J183,9473,Binding and Finishing Machine Operators
+626,J184,9474,Photographic and Film Processors
+628,J191,9511,Machining Tool Operators
+629,J192,9512,Forging Machine Operators
+630,J193,9513,Woodworking Machine Operators
+631,J194,9514,Metalworking Machine Operators
+632,J196,9516,Other Metal Products Machine Operators
+633,J197,9517,Other Products Machine Operators
+635,J211,9481,Aircraft Assemblers and Aircraft Assembly Inspectors
+636,J212,9482,"Motor Vehicle Assemblers, Inspectors and Testers"
+637,J213,9483,"Electronics Assemblers, Fabricators, Inspectors and Testers"
+638,J214,9484,"Assemblers and Inspectors, Electrical Appliance, Apparatus and Equipment Manufacturing"
+639,J215,9485,"Assemblers, Fabricators and Inspectors, Industrial Electrical Motors and Transformers"
+640,J216,9486,Mechanical Assemblers and Inspectors
+641,J217,9487,"Machine Operators and Inspectors, Electrical Apparatus Manufacturing"
+643,J221,9491,Boat Assemblers and Inspectors
+644,J222,9492,Furniture and Fixture Assemblers and Inspectors
+645,J223,9493,Other Wood Products Assemblers and Inspectors
+646,J224,9494,Furniture Finishers and Refinishers
+647,J225,9495,"Plastic Products Assemblers, Finishers and Inspectors"
+648,J226,9496,Painters and Coaters - Industrial
+649,J227,9497,"Plating, Metal Spraying and Related Operators"
+650,J228,9498,Other Assemblers and Inspectors
+652,J311,9611,Labourers in Mineral and Metal Processing
+653,J312,9612,Labourers in Metal Fabrication
+654,J313,9613,Labourers in Chemical Products Processing and Utilities
+655,J314,9614,"Labourers in Wood, Pulp and Paper Processing"
+656,J315,9615,Labourers in Rubber and Plastic Products Manufacturing
+657,J316,9616,Labourers in Textile Processing
+658,J317,9617,"Labourers in Food, Beverage and Tobacco Processing"
+659,J318,9618,Labourers in Fish Processing
+660,J319,9619,"Other Labourers in Processing, Manufacturing and Utilities"
