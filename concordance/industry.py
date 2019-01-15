@@ -5,7 +5,7 @@ ToDo: Real Docstring for the module.
 @author: e975360
 """
 # import pandas as pd
-from concordance.html_table import HtmlTables
+from html_table import HtmlTables
 
 
 def industry_reclass(

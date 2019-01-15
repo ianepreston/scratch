@@ -6,7 +6,7 @@ make wrappers straight from NOC 2006 to 2011 (with NOC S 2006 as intermediate)
 Maybe make a split and not split function?
 @author: e975360
 """
-from concordance.html_table import HtmlTables
+from html_table import HtmlTables
 import pandas as pd
 
 
