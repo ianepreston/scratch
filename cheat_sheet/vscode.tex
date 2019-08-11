@@ -1,3 +1,5 @@
+\put(10,200){ % Divide the page
+\begin{minipage}[t]{85mm} % Create a box to house text
 \sectiontitle{VS Code}
 \texttt{\\General\\}			
 \command{Ctrl + shift + P, F1}{Show Command Palette}
@@ -19,6 +21,14 @@
 \command{Shift + F12}{Show References}
 \command{F2}{Rename symbol}
 \command{Ctrl + K P}{Copy path of active file}
+\end{minipage}}
+
+%----------------------------------------------------------------------------------------
+%	SECOND COLUMN SPECIFICATION 
+%----------------------------------------------------------------------------------------
+
+\put(105,200){ % Divide the page
+\begin{minipage}[t]{85mm} % Create a box to house text
 \texttt{\\Editor View\\}			
 \command{Ctrl + $\backslash$}{Split editor}
 \command{Ctrl + 1 / 2 /3}{Focus on nth editor group}
@@ -26,11 +36,20 @@
 \command{F11}{Toggle full screen}
 \command{Ctrl + B}{Toggle sidebar visbility}
 \command{Ctrl + K Z}{Toggle zen mode}
+\end{minipage}}
+
+%----------------------------------------------------------------------------------------
+%	THIRD COLUMN SPECIFICATION 
+%----------------------------------------------------------------------------------------
+
+\put(200,200){ % Divide the page
+\begin{minipage}[t]{85mm} % Create a box to house tex
 \texttt{\\Debugging\\}			
 \command{F9}{Toggle breakpoint}
 \command{F5}{Start/Continue}
 \command{Shift + F5}{Stop}
 \command{F11 / Shift + F11}{Step into/out}
 \command{F10}{Step over}
+\end{minipage}}
 
 
