@@ -52,6 +52,17 @@ class Node:
                 return True
         return False
 
+    def calculate_value(self):
+        if not self.children:
+            return sum(self.meta)
+        else:
+            value = 0
+            for meta in self.meta:
+                meta -= 1
+                if meta >= 0 and meta < len(self.children):
+                    value += self.children[meta].calculate_value()
+            return value
+
 
 def traverse(node):
     all_nodes = []
@@ -77,3 +88,15 @@ def part1(filename):
 
 assert part1(EX) == 138
 print(part1(IN))
+
+
+def part2(filename):
+    inputs = treelist(filename)
+    root_node = Node()
+    for num in inputs:
+        root_node.receive_input(num)
+    return root_node.calculate_value()
+
+
+assert part2(EX) == 66
+print(part2(IN))
