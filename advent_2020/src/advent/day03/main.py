@@ -1,4 +1,4 @@
-"""Day 02 of the advent of code challenge."""
+"""Day 03 of the advent of code challenge."""
 import math
 from pathlib import Path
 from typing import List, Tuple
