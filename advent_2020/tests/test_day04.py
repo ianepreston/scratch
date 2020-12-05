@@ -1,4 +1,4 @@
-"""Test examples and solutions to day 03."""
+"""Test examples and solutions to day 04."""
 from advent.day04 import main
 
 
