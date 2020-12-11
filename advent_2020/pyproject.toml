@@ -27,7 +27,6 @@ xdoctest = "^0.14.0"
 safety = "^1.9.0"
 mypy = "^0.790"
 flake8-annotations = "^2.4.1"
-jupyterlab = "^2.2.9"
 
 [tool.poetry.scripts]
 advent = "advent.console:main"
