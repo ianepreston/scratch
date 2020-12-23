@@ -4,7 +4,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import List, Set
 
-from advent.compy import Compy, Instruction, instructions_from_file
+from advent.day08.compy import Compy, Instruction, instructions_from_file
 
 
 def part1(filename: str = "input.txt") -> int:
