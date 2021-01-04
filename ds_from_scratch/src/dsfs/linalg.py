@@ -50,3 +50,24 @@ def subtract(v: Vector, w: Vector) -> Vector:
     if len(v) != len(w):
         raise ValueError("Vectors must be the same length")
     return [v_i - w_i for v_i, w_i in zip(v, w)]
+
+
+def vector_sum(vectors: List[Vector]) -> Vector:
+    """Sum a list of vectors.
+
+    Args:
+        vectors: The list of vectors
+
+    Returns:
+        The combined vector
+
+    Raises:
+        ValueError: If any vectors are different lengths or no vectors are supplied
+    """
+    if not vectors:
+        raise ValueError("No vectors provided")
+    num_elements: int = len(vectors[0])
+    if not all(len(v) == num_elements for v in vectors):
+        raise ValueError("All vectors must be same size")
+    # The i-th element of the result si the sum of every vector[i]
+    return [sum(vector[i] for vector in vectors) for i in range(num_elements)]
