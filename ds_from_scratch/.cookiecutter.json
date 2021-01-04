@@ -1,0 +1,10 @@
+{
+  "_template": "gh:cjolowicz/cookiecutter-hypermodern-python",
+  "author": "Ian Preston",
+  "email": "ian.e.preston@gmail.com",
+  "friendly_name": "Data Science From Scratch",
+  "github_user": "ianepreston",
+  "package_name": "dsfs",
+  "project_name": "ds_from_scratch",
+  "version": "0.0.0"
+}
