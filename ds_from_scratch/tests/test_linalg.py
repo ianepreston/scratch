@@ -53,3 +53,8 @@ def test_distance() -> None:
     """Test distance."""
     # c^2 == a^2 + b^2
     assert linalg.distance([0, 0], [3, 3]) == math.sqrt(18)
+
+
+def test_identity_matrix() -> None:
+    """Test creating identify matrix."""
+    assert linalg.identity_matrix(3) == [[1, 0, 0], [0, 1, 0], [0, 0, 1]]

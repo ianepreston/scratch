@@ -1,10 +1,13 @@
 """Linear algebra from scratch."""
 import math
+from typing import Callable
 from typing import List
+from typing import Tuple
 from typing import Union
 
 Numeric = Union[int, float, complex]
 Vector = List[Numeric]
+Matrix = List[List[Numeric]]
 
 
 def add(v: Vector, w: Vector) -> Vector:
@@ -143,3 +146,32 @@ def squared_distance(v: Vector, w: Vector) -> Numeric:
 def distance(v: Vector, w: Vector) -> float:
     """The distance between two vectors."""
     return magnitude(subtract(v, w))
+
+
+def shape(A: Matrix) -> Tuple[int, int]:
+    """Number of rows of A, Number of columns of A."""
+    num_rows = len(A)
+    num_cols = len(A[0]) if A else 0
+    return num_rows, num_cols
+
+
+def get_row(A: Matrix, i: int) -> Vector:
+    """The ith row of A as a vector."""
+    return A[i]
+
+
+def get_column(A: Matrix, j: int) -> Vector:
+    """The jth column of A as a vector."""
+    return [A_i[j] for A_i in A]
+
+
+def make_matrix(
+    num_rows: int, num_cols: int, entry_fn: Callable[[int, int], float]
+) -> Matrix:
+    """Create a matrix of num_rows x num_cols shape whose i,j element is entry_fn(i, j)."""  # noqaB950
+    return [[entry_fn(i, j) for j in range(num_cols)] for i in range(num_rows)]
+
+
+def identity_matrix(n: int) -> Matrix:
+    """Create an nxn identity matrix."""
+    return make_matrix(n, n, lambda i, j: 1 if i == j else 0)
