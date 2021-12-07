@@ -130,3 +130,6 @@ dmypy.json
 
 # Env files
 aoc_data/.env
+
+# Notebook crud
+*.virtual_documents*
