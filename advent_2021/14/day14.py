@@ -17,28 +17,33 @@ def parse_input(infile: str) -> Tuple[str, Dict[str, str]]:
     return polystr, react_dict
 
 
-def react(poly: str, reactions: Dict[str, str]) -> str:
-    """Create a chain reaction."""
-    reaction_chain = "".join(
-        "".join((a, reactions["".join((a, b))])) for a, b in zip(poly, poly[1:])
-    )
-    return "".join((reaction_chain, poly[-1]))
+def react(poly: str, reactions: Dict[str, str], steps: int) -> Dict[str, int]:
+    """Run through the reactions."""
+    lcounter = Counter(poly)
+    pcounter = Counter("".join((a, b)) for a, b in zip(poly, poly[1:]))
+    for _ in range(steps):
+        for pair, count in Counter(pcounter).items():
+            reaction = reactions[pair]
+            if reaction:
+                lpair = "".join((pair[0], reaction))
+                rpair = "".join((reaction, pair[1]))
+                pcounter[lpair] += count
+                pcounter[rpair] += count
+                pcounter[pair] -= count
+                lcounter[reaction] += count
+    return lcounter
 
 
-def polydiff(poly: str) -> int:
+def polydiff(lcounter: Dict[str, int]) -> int:
     """Difference between the count of the most common and least common element."""
-    polylist = [c for c in poly]
-    counts = Counter(polylist)
-    maxcount = counts[max(polylist, key=counts.get)]
-    mincount = counts[min(polylist, key=counts.get)]
-    return maxcount - mincount
+    cmin, *_, cmax = sorted(lcounter.values())
+    return cmax - cmin
 
 
 def partn(infile: str, steps: int) -> int:
     polystr, react_dict = parse_input(infile)
-    for _ in range(steps):
-        polystr = react(polystr, react_dict)
-    return polydiff(polystr)
+    lcounter = react(polystr, react_dict, steps)
+    return polydiff(lcounter)
 
 
 def part1(infile: str) -> int:
