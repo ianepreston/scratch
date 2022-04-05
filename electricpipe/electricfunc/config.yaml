@@ -1,0 +1,6 @@
+name: electricfunc
+
+version: 0.0.2
+
+functions:
+  - name: helloworld
