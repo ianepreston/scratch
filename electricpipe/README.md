@@ -89,3 +89,4 @@ In approximately chronological order here are the sites I looked at while buildi
 * https://adrianhall.github.io/typescript/2019/10/23/terraform-functions/
 * https://www.maxivanov.io/deploy-azure-functions-with-terraform/
 * https://www.maxivanov.io/publish-azure-functions-code-with-terraform/
+* https://medium.com/pernod-ricard-tech/how-to-properly-manage-secrets-in-azure-app-service-with-terraform-44bc1ab99a02

@@ -12,3 +12,8 @@ variable "location" {
   type        = string
   description = "Azure region to deploy module to"
 }
+
+variable "testsecret" {
+  type        = string
+  description = "A test secret to put in Azure secret vault"
+}

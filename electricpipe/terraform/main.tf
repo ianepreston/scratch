@@ -4,14 +4,21 @@ terraform {
       source = "hashicorp/azurerm"
       # Root module should specify the maximum provider version
       # The ~> operator is a convenient shorthand for allowing only patch releases within a specific minor release.
-      version = "~> 2.26"
+      version = "~> 3.0"
     }
   }
 }
 
 provider "azurerm" {
-  features {}
+  features {
+    key_vault {
+      purge_soft_delete_on_destroy = true
+    }
+  }
 }
+
+
+data "azurerm_client_config" "current" {}
 
 resource "azurerm_resource_group" "resource_group" {
   name     = "${var.project}-${var.environment}-resource-group"
@@ -25,51 +32,79 @@ resource "azurerm_storage_account" "storage_account" {
   location                 = var.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
+  account_kind             = "BlobStorage"
 }
 
-resource "azurerm_application_insights" "application_insights" {
-  name                = "${var.project}-${var.environment}-application-insights"
-  location            = var.location
-  resource_group_name = azurerm_resource_group.resource_group.name
-  application_type    = "Node.JS"
-}
-
-resource "azurerm_app_service_plan" "app_service_plan" {
+resource "azurerm_service_plan" "app_service_plan" {
   name                = "${var.project}-${var.environment}-app-service-plan"
   resource_group_name = azurerm_resource_group.resource_group.name
   location            = var.location
-  kind                = "FunctionApp"
-  reserved            = true # this has to be set to true for Linux. Not related to the Premium Plan
-  sku {
-    tier = "Dynamic"
-    size = "Y1"
-  }
+  os_type             = "Linux"
+  sku_name            = "Y1"
 }
 
-resource "azurerm_function_app" "function_app" {
-  name                = "${var.project}-${var.environment}-function-app"
+resource "azurerm_linux_function_app" "function_app" {
+  name                = "${var.project}-${var.environment}-linux-function-app"
   resource_group_name = azurerm_resource_group.resource_group.name
   location            = var.location
-  app_service_plan_id = azurerm_app_service_plan.app_service_plan.id
+  service_plan_id     = azurerm_service_plan.app_service_plan.id
   app_settings = {
-    "WEBSITE_RUN_FROM_PACKAGE"       = "",
-    "FUNCTIONS_WORKER_RUNTIME"       = "python",
-    "APPINSIGHTS_INSTRUMENTATIONKEY" = azurerm_application_insights.application_insights.instrumentation_key,
+    # "WEBSITE_RUN_FROM_PACKAGE" = "",
+    # "FUNCTIONS_WORKER_RUNTIME" = "python",
+    "TESTSECRET" = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.testsecret.versionless_id})",
   }
-  os_type = "linux"
   site_config {
-    linux_fx_version          = "PYTHON|3.8"
-    use_32_bit_worker_process = false
+    application_stack {
+      python_version = "3.8"
+    }
   }
   storage_account_name       = azurerm_storage_account.storage_account.name
   storage_account_access_key = azurerm_storage_account.storage_account.primary_access_key
-  version                    = "~3"
 
-  lifecycle {
-    ignore_changes = [
-      app_settings["WEBSITE_RUN_FROM_PACKAGE"],
+  identity {
+    type = "SystemAssigned"
+  }
+}
+
+resource "azurerm_key_vault" "key_vault" {
+  name                = "${var.project}${var.environment}keyvault"
+  resource_group_name = azurerm_resource_group.resource_group.name
+  location            = var.location
+  tenant_id           = data.azurerm_client_config.current.tenant_id
+  sku_name            = "standard"
+  access_policy {
+
+    tenant_id = data.azurerm_client_config.current.tenant_id
+    object_id = data.azurerm_client_config.current.object_id
+
+
+    secret_permissions = [
+      "Backup",
+      "Delete",
+      "Get",
+      "List",
+      "Purge",
+      "Recover",
+      "Restore",
+      "Set",
     ]
   }
+
+}
+
+
+resource "azurerm_key_vault_secret" "testsecret" {
+  name         = "testsecret"
+  value        = var.testsecret
+  key_vault_id = azurerm_key_vault.key_vault.id
+}
+
+
+resource "azurerm_key_vault_access_policy" "key_vault_access_policy" {
+  key_vault_id       = azurerm_key_vault.key_vault.id
+  tenant_id          = data.azurerm_client_config.current.tenant_id
+  object_id          = azurerm_linux_function_app.function_app.identity[0].principal_id
+  secret_permissions = ["Get"]
 }
 
 locals {
@@ -78,7 +113,6 @@ locals {
   func_app_functions = yamldecode(file("../electricfunc/config.yaml"))["functions"]
 }
 
-
 resource "null_resource" "functions" {
 
   triggers = {
@@ -86,6 +120,6 @@ resource "null_resource" "functions" {
   }
   # Seems we have to wait a bit after the function app is created before the publish command will work
   provisioner "local-exec" {
-    command = "sleep 10; cd ../electricfunc; func azure functionapp publish ${azurerm_function_app.function_app.name}; cd ../terraform"
+    command = "sleep 30; cd ../electricfunc; func azure functionapp publish ${azurerm_linux_function_app.function_app.name}; cd ../terraform"
   }
 }
