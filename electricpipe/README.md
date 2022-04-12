@@ -4,11 +4,11 @@ I want to test out some different ways of building a data pipeline. The goal of 
 
 ## Setting up my local environment
 
-Besides terraform I want to deploy this pipeline to Azure, so I will need some Azure tools installed:
+Besides terraform I want to deploy this pipeline to Azure, so I will need some Azure tools installed.
 
 ### Install Azure CLI
 
-Instructions from [here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli). This is what they recommended at the time I was working on this:
+Instructions from [here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli). This is what they recommended at the time I was working on this for ubuntu:
 
 ```bash
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
@@ -16,9 +16,11 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 az login
 ```
 
+For arch you can just install ```azure-cli``` from the AUR.
+
 ### Install Azure functions CLI
 
-Instructions from [here](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=v4%2Clinux%2Ccsharp%2Cportal%2Cbash#v2=). This is what they recommended at the time I was working on this:
+Instructions from [here](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=v4%2Clinux%2Ccsharp%2Cportal%2Cbash#v2=). This is what they recommended at the time I was working on this for ubuntu:
 
 ```bash
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
@@ -26,6 +28,8 @@ sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-$(lsb_release -cs)-prod $(lsb_release -cs) main" > /etc/apt/sources.list.d/dotnetdev.list'
 sudo apt update && sudo apt install azure-functions-core-tools-4
 ```
+
+For arch you can just install ```azure-functions-core-tools-bin``` from the AUR.
 
 ### Install Terraform
 
@@ -38,10 +42,11 @@ sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(l
 sudo apt-get update && sudo apt-get install terraform
 ```
 
+Or just ```pacman -S terraform``` in Arch.
 
 ## Set up a function app and functions
 
-I've built function apps before but I had a very manual deployment process, and if I didn't like something there was no easy way to automatically tear it all down and start again. I'm going to try and resolve that by doing it all with terraform. Setting up the app code structure is outside the scope of terraform though so I'll build a "hello world" example 
+I've built function apps before but I had a very manual deployment process, and if I didn't like something there was no easy way to automatically tear it all down and start again. I'm going to try and resolve that by doing it all with terraform. Setting up the app code structure is outside the scope of terraform though so I'll build a "hello world" example
 
 ```bash
 # Set up python environment for the functions
@@ -54,6 +59,10 @@ func init electricfunc --python
 cd electricfunc/
 func new --name helloworld --template "HTTP trigger" --authlevel "anonymous"
 ```
+
+## Creating a local environment after cloning
+
+There are a couple files that are not stored in git because they can contain secrets. In the function app directory there's ```local.settings.json``` and in the terraform directory there's ```terraform.tfvars```. From the function app directory if you run ```func init``` it will recreate the ```local.settings.json``` file. ```terraform.tfvars``` is just pairs of variables and values of the form ```<variable> = <value>``` corresponding to the variables described in variables.tf.
 
 ## Annoying caveat I found about terraform
 

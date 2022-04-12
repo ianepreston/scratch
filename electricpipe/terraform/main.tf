@@ -25,7 +25,12 @@ resource "azurerm_resource_group" "resource_group" {
   location = var.location
 }
 
-
+resource "azurerm_application_insights" "application_insights" {
+  name                = "${var.project}-${var.environment}-application-insights"
+  location            = var.location
+  resource_group_name = azurerm_resource_group.resource_group.name
+  application_type    = "web"
+}
 resource "azurerm_storage_account" "storage_account" {
   name                     = "${var.project}${var.environment}storage"
   resource_group_name      = azurerm_resource_group.resource_group.name
@@ -49,9 +54,9 @@ resource "azurerm_linux_function_app" "function_app" {
   location            = var.location
   service_plan_id     = azurerm_service_plan.app_service_plan.id
   app_settings = {
-    # "WEBSITE_RUN_FROM_PACKAGE" = "",
-    # "FUNCTIONS_WORKER_RUNTIME" = "python",
-    "TESTSECRET" = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.testsecret.versionless_id})",
+    "APPINSIGHTS_INSTRUMENTATIONKEY" = azurerm_application_insights.application_insights.instrumentation_key,
+    "TESTSECRET"                     = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.testsecret.versionless_id})",
+    "AESOAPI"                        = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.aesoapi.versionless_id})",
   }
   site_config {
     application_stack {
@@ -98,7 +103,11 @@ resource "azurerm_key_vault_secret" "testsecret" {
   value        = var.testsecret
   key_vault_id = azurerm_key_vault.key_vault.id
 }
-
+resource "azurerm_key_vault_secret" "aesoapi" {
+  name         = "aesoapi"
+  value        = var.aesoapi
+  key_vault_id = azurerm_key_vault.key_vault.id
+}
 
 resource "azurerm_key_vault_access_policy" "key_vault_access_policy" {
   key_vault_id       = azurerm_key_vault.key_vault.id
