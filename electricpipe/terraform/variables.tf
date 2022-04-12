@@ -15,5 +15,12 @@ variable "location" {
 
 variable "testsecret" {
   type        = string
+  sensitive   = true
   description = "A test secret to put in Azure secret vault"
+}
+
+variable "aesoapi" {
+  type        = string
+  sensitive   = true
+  description = "API key to access Alberta Electric System Operator data"
 }
