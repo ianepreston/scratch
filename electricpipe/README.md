@@ -4,7 +4,7 @@ I want to test out some different ways of building a data pipeline. The goal of 
 
 ## Setting up my local environment
 
-Besides terraform I want to deploy this pipeline to Azure, so I will need some Azure tools installed:
+Besides terraform I want to deploy this pipeline to Azure, so I will need some Azure tools installed.
 
 ### Install Azure CLI
 
@@ -59,6 +59,10 @@ func init electricfunc --python
 cd electricfunc/
 func new --name helloworld --template "HTTP trigger" --authlevel "anonymous"
 ```
+
+## Creating a local environment after cloning
+
+There are a couple files that are not stored in git because they can contain secrets. In the function app directory there's ```local.settings.json``` and in the terraform directory there's ```terraform.tfvars```. From the function app directory if you run ```func init``` it will recreate the ```local.settings.json``` file. ```terraform.tfvars``` is just pairs of variables and values of the form ```<variable> = <value>``` corresponding to the variables described in variables.tf.
 
 ## Annoying caveat I found about terraform
 
