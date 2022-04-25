@@ -3,7 +3,7 @@ import json
 import logging
 import os
 import random
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
@@ -113,9 +113,10 @@ def stage_sql() -> None:
     with engine.connect() as conn:
         conn.execute("truncate table poolstage;")
         _ = conn.execute(sqlalchemy.insert(poolstage), prices)
+    logging.info(f"Staged {len(prices):,.0f} records")
 
 
-def update_pool():
+def update_pool() -> Tuple[int, int]:
     db = MSDatabase()
     stage_tbl = db.get_table("poolstage")
     pool_tbl = db.get_table("poolprice")
@@ -140,8 +141,11 @@ def update_pool():
     insert_cols = ["pool_time_stamp", "pool_price", "forecast_pool_price", "insert_time_stamp", "update_time_stamp"]
     insert_stmt = pool_tbl.insert().from_select(insert_cols, insert_select)
     with db.engine.connect() as conn:
-        conn.execute(update_stmt)
-        conn.execute(insert_stmt)
+        update_r = conn.execute(update_stmt)
+        insert_r = conn.execute(insert_stmt)
+        logging.info(f"Updated {update_r.rowcount} rows")
+        logging.info(f"Inserted {insert_r.rowcount} rows")
+        return update_r.rowcount, insert_r.rowcount
 
 
 
@@ -150,5 +154,5 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     # result_dict = process_prices()
     # return func.HttpResponse(json.dumps(result_dict))
     stage_sql()
-    update_pool()
-    return func.HttpResponse("It ran I guess")
+    updates, inserts = update_pool()
+    return func.HttpResponse(f"Inserted {inserts} rows and updated {updates} rows.")
