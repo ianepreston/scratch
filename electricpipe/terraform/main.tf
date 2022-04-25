@@ -60,6 +60,8 @@ resource "azurerm_linux_function_app" "function_app" {
     "APPINSIGHTS_INSTRUMENTATIONKEY" = azurerm_application_insights.application_insights.instrumentation_key,
     "TESTSECRET"                     = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.testsecret.versionless_id})",
     "AESOAPI"                        = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.aesoapi.versionless_id})",
+    "SQLIP"                          = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.sqlip.versionless_id})",
+    "SA_PASSWORD"                    = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.sqlpass.versionless_id})",
   }
   site_config {
     application_stack {
@@ -132,7 +134,7 @@ resource "null_resource" "functions" {
   }
   # Seems we have to wait a bit after the function app is created before the publish command will work
   provisioner "local-exec" {
-    command = "sleep 30; cd ../electricfunc; func azure functionapp publish ${azurerm_linux_function_app.function_app.name}; cd ../terraform"
+    command = "sleep 30; cd ../electricfunc; func azure functionapp publish ${azurerm_linux_function_app.function_app.name} --build remote --build-native-deps; cd ../terraform"
   }
 }
 
@@ -176,4 +178,16 @@ resource "azurerm_container_group" "container_group" {
       storage_account_key  = data.azurerm_storage_account.sqlstorage.primary_access_key
     }
   }
+}
+
+resource "azurerm_key_vault_secret" "sqlip" {
+  name         = "sqlip"
+  value        = azurerm_container_group.container_group.ip_address
+  key_vault_id = azurerm_key_vault.key_vault.id
+}
+
+resource "azurerm_key_vault_secret" "sqlpass" {
+  name         = "sqlpass"
+  value        = var.mssqlpass
+  key_vault_id = azurerm_key_vault.key_vault.id
 }
