@@ -3,11 +3,12 @@ import json
 import logging
 import os
 import random
-from typing import Dict, List
+from typing import Dict, List, Optional
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 import azure.functions as func
+import sqlalchemy
 
 
 def get_pool_prices() -> List[Dict[str, str]]:
@@ -29,13 +30,16 @@ def get_pool_prices() -> List[Dict[str, str]]:
     logging.info(f"Retrieved {len(result_dict)} records.")
     return result_dict
 
+
 def clean_pool_price(raw_pool: Dict[str, str]) -> Dict:
     """Clean up a pool price entry."""
     return {
-        "timestamp": raw_pool["begin_datetime_mpt"],
+        "pool_time_stamp": dt.datetime.fromisoformat(raw_pool["begin_datetime_mpt"]),
         "pool_price": raw_pool["pool_price"],
-        "forecast_pool_price": raw_pool["forecast_pool_price"]
+        "forecast_pool_price": raw_pool["forecast_pool_price"],
+        "insert_time_stamp": dt.datetime.now(),
     }
+
 
 def noisy_forecast(clean_pool: Dict[str, str]):
     """Add some noise to forecasts so I can be sure they change.
@@ -43,14 +47,15 @@ def noisy_forecast(clean_pool: Dict[str, str]):
     I don't want every record to change, but I do want some change so I can see
     how that will work.
     """
-    # probability that I actually add noise, let's say I add it to 10% of records
-    cutoff = 0.1
-    if random.random() < cutoff:
+    # probability that I actually add noise, let's say I add it to 1% of records
+    cutoff = 0.01
+    if random.random() < cutoff and clean_pool["forecast_pool_price"] != "":
         base_fcst = float(clean_pool["forecast_pool_price"])
         scale_factor = random.uniform(0.9, 1.1)
         noisy_forecast = base_fcst * scale_factor
         clean_pool["forecast_pool_price"] = f"{noisy_forecast:.2f}"
     return clean_pool
+
 
 def process_prices() -> List[Dict[str, str]]:
     """Get pool prices with some noise in the forecast in the format I want."""
@@ -58,7 +63,92 @@ def process_prices() -> List[Dict[str, str]]:
         noisy_forecast(clean_pool_price(pool_price)) for pool_price in get_pool_prices()
     ]
 
+
+class MSDatabase:
+    """Helper class to access the SQL server database."""
+
+    _meta = sqlalchemy.MetaData()
+
+    @property
+    def engine(self) -> sqlalchemy.engine.Engine:
+        """Get a connection to the mssql database."""
+        sqlip = os.getenv("SQLIP")
+        sa_pass = os.getenv("SA_PASSWORD")
+        connection_url = sqlalchemy.engine.URL.create(
+            "mssql+pyodbc",
+            username="sa",
+            password=sa_pass,
+            host=sqlip,
+            port=1433,
+            database="electric",
+            query={"driver": "ODBC Driver 17 for SQL Server"},
+        )
+        return sqlalchemy.create_engine(connection_url)
+
+    @property
+    def metadata(self) -> sqlalchemy.schema.MetaData:
+        return self.__class__._meta
+
+    def get_table(self, table_str: str) -> sqlalchemy.Table:
+        return sqlalchemy.Table(table_str, self.metadata, autoload_with=self.engine)
+
+
+def floatmapper(instr: str) -> Optional[float]:
+    """Convert a string to float."""
+    try:
+        return float(instr)
+    except:
+        return None
+
+
+def stage_sql() -> None:
+    """Stage the latest AESO query to the database."""
+    db = MSDatabase()
+    engine = db.engine
+    poolstage = db.get_table("poolstage")
+    prices = process_prices()
+    for price in prices:
+        for col in ["forecast_pool_price", "pool_price"]:
+            price[col] = floatmapper(price[col])
+    with engine.connect() as conn:
+        conn.execute("truncate table poolstage;")
+        _ = conn.execute(sqlalchemy.insert(poolstage), prices)
+
+
+def update_pool():
+    db = MSDatabase()
+    stage_tbl = db.get_table("poolstage")
+    pool_tbl = db.get_table("poolprice")
+    stage_key = stage_tbl.c.pool_time_stamp
+    pool_key = pool_tbl.c.pool_time_stamp
+    update_stmt = (
+        pool_tbl.update()
+        .values(forecast_pool_price=stage_tbl.c.forecast_pool_price, update_time_stamp=stage_tbl.c.insert_time_stamp)
+        .where(stage_key == pool_key)
+        .where(stage_tbl.c.forecast_pool_price != pool_tbl.c.forecast_pool_price)
+    )
+
+    insert_select = sqlalchemy.select(
+        [
+            stage_key,
+            stage_tbl.c.pool_price,
+            stage_tbl.c.forecast_pool_price,
+            stage_tbl.c.insert_time_stamp,
+            stage_tbl.c.insert_time_stamp.label("update_time_stamp"),
+        ]
+    ).where(stage_key.notin_(sqlalchemy.select([pool_key])))
+    insert_cols = ["pool_time_stamp", "pool_price", "forecast_pool_price", "insert_time_stamp", "update_time_stamp"]
+    insert_stmt = pool_tbl.insert().from_select(insert_cols, insert_select)
+    with db.engine.connect() as conn:
+        conn.execute(update_stmt)
+        conn.execute(insert_stmt)
+
+
+
 def main(req: func.HttpRequest) -> func.HttpResponse:
-    logging.info('Python HTTP trigger function processed a request.')
-    result_dict = process_prices()
-    return func.HttpResponse(json.dumps(result_dict))
+    logging.info("Python HTTP trigger function processed a request.")
+    # result_dict = process_prices()
+    # return func.HttpResponse(json.dumps(result_dict))
+    stage_sql()
+    update_pool()
+    return func.HttpResponse("It ran I guess")

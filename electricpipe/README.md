@@ -72,6 +72,13 @@ func new --name helloworld --template "HTTP trigger" --authlevel "anonymous"
 
 There are a couple files that are not stored in git because they can contain secrets. In the function app directory there's ```local.settings.json``` and in the terraform directory there's ```terraform.tfvars```. From the function app directory if you run ```func init``` it will recreate the ```local.settings.json``` file. ```terraform.tfvars``` is just pairs of variables and values of the form ```<variable> = <value>``` corresponding to the variables described in variables.tf.
 
+
+## Install Microsoft ODBC drivers in arch
+
+```bash
+yay -S unixodbc msodbcsql
+```
+
 ## Annoying caveat I found about terraform
 
 If a terraform job fails halfway through an "apply" then it won't clean up the previous steps. As an example when I first tried to apply this function app it built 3 things and then failed on the 4th because something in my config wasn't available in the region I'd selected (Canada Central). I figured the easiest fix would be to update the config to "US East" since that was what the example I was following used and rerun ```terraform apply```. This resulted in an error though because I already had a resource group of the same name in Canada Central and it couldn't create a new one in US East. I had assumed it would update the existing resources with my new configuration, but for some reason that wasn't saved. I ended up reverting my location back to Canada Central, running ```terraform destroy``` to clean up, manually checking in Azure that everything was gone, and then re-running with the new location. See [this post](https://community.gruntwork.io/t/cleanup-of-terraform-apply-partial-fails/420) for a discussion.
