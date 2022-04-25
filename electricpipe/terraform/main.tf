@@ -135,3 +135,45 @@ resource "null_resource" "functions" {
     command = "sleep 30; cd ../electricfunc; func azure functionapp publish ${azurerm_linux_function_app.function_app.name}; cd ../terraform"
   }
 }
+
+
+data "azurerm_storage_account" "sqlstorage" {
+  name                = "elctrcd${var.environment}storage"
+  resource_group_name = "elctrcd-${var.environment}-resource-group"
+}
+
+resource "azurerm_container_group" "container_group" {
+  name                = "${var.project}-${var.environment}-container-group"
+  resource_group_name = azurerm_resource_group.resource_group.name
+  location            = var.location
+  ip_address_type     = "Public"
+  os_type             = "Linux"
+
+  container {
+    name   = "mssql"
+    image  = "mcr.microsoft.com/mssql/server:2019-latest"
+    cpu    = "0.5"
+    memory = "2.5"
+
+    ports {
+      port     = 1433
+      protocol = "TCP"
+    }
+
+    environment_variables = {
+      ACCEPT_EULA = "Y"
+    }
+    secure_environment_variables = {
+      SA_PASSWORD = var.mssqlpass
+    }
+
+    volume {
+      name                 = "alldata"
+      mount_path           = "/var/opt/mssql"
+      read_only            = false
+      share_name           = "elctrcd${var.environment}mssql"
+      storage_account_name = data.azurerm_storage_account.sqlstorage.name
+      storage_account_key  = data.azurerm_storage_account.sqlstorage.primary_access_key
+    }
+  }
+}
