@@ -24,3 +24,9 @@ variable "aesoapi" {
   sensitive   = true
   description = "API key to access Alberta Electric System Operator data"
 }
+
+variable "mssqlpass" {
+  type        = string
+  sensitive   = true
+  description = "Password to MS SQL server db"
+}

@@ -14,6 +14,9 @@ provider "azurerm" {
     key_vault {
       purge_soft_delete_on_destroy = true
     }
+    resource_group {
+      prevent_deletion_if_contains_resources = false
+    }
   }
 }
 
@@ -57,6 +60,8 @@ resource "azurerm_linux_function_app" "function_app" {
     "APPINSIGHTS_INSTRUMENTATIONKEY" = azurerm_application_insights.application_insights.instrumentation_key,
     "TESTSECRET"                     = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.testsecret.versionless_id})",
     "AESOAPI"                        = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.aesoapi.versionless_id})",
+    "SQLIP"                          = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.sqlip.versionless_id})",
+    "SA_PASSWORD"                    = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.sqlpass.versionless_id})",
   }
   site_config {
     application_stack {
@@ -129,6 +134,60 @@ resource "null_resource" "functions" {
   }
   # Seems we have to wait a bit after the function app is created before the publish command will work
   provisioner "local-exec" {
-    command = "sleep 30; cd ../electricfunc; func azure functionapp publish ${azurerm_linux_function_app.function_app.name}; cd ../terraform"
+    command = "sleep 30; cd ../electricfunc; func azure functionapp publish ${azurerm_linux_function_app.function_app.name} --build remote --build-native-deps; cd ../terraform"
   }
+}
+
+
+data "azurerm_storage_account" "sqlstorage" {
+  name                = "elctrcd${var.environment}storage"
+  resource_group_name = "elctrcd-${var.environment}-resource-group"
+}
+
+resource "azurerm_container_group" "container_group" {
+  name                = "${var.project}-${var.environment}-container-group"
+  resource_group_name = azurerm_resource_group.resource_group.name
+  location            = var.location
+  ip_address_type     = "Public"
+  os_type             = "Linux"
+
+  container {
+    name   = "mssql"
+    image  = "mcr.microsoft.com/mssql/server:2019-latest"
+    cpu    = "0.5"
+    memory = "2.5"
+
+    ports {
+      port     = 1433
+      protocol = "TCP"
+    }
+
+    environment_variables = {
+      ACCEPT_EULA = "Y"
+    }
+    secure_environment_variables = {
+      SA_PASSWORD = var.mssqlpass
+    }
+
+    volume {
+      name                 = "alldata"
+      mount_path           = "/var/opt/mssql"
+      read_only            = false
+      share_name           = "elctrcd${var.environment}mssql"
+      storage_account_name = data.azurerm_storage_account.sqlstorage.name
+      storage_account_key  = data.azurerm_storage_account.sqlstorage.primary_access_key
+    }
+  }
+}
+
+resource "azurerm_key_vault_secret" "sqlip" {
+  name         = "sqlip"
+  value        = azurerm_container_group.container_group.ip_address
+  key_vault_id = azurerm_key_vault.key_vault.id
+}
+
+resource "azurerm_key_vault_secret" "sqlpass" {
+  name         = "sqlpass"
+  value        = var.mssqlpass
+  key_vault_id = azurerm_key_vault.key_vault.id
 }
