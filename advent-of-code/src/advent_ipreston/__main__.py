@@ -7,11 +7,15 @@ import click
 
 @click.command()
 @click.version_option()
-@click.option("-y", "--year", type=str, default=None)
-@click.option("-d", "--day", type=str, default=1)
+@click.option(
+    "-y", "--year", type=str, default=None, help="Puzzle year (default current)"
+)
+@click.option(
+    "-d", "--day", type=str, default=None, help="Puzzle day (default current)"
+)
 # @click.option("-p", "--part", type=str, default=None)
 def main(year: int, day: int) -> None:
-    """Ian's Advent of Code."""
+    """Ian's Advent of Code puzzle runner."""
     if year is None:
         year = dt.date.today().year
     if day is None:
