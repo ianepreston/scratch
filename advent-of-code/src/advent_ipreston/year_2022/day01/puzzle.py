@@ -53,6 +53,6 @@ def part2(infile: str) -> int:
     return sum(top_elves)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     print(f"Part 1: {part1('puzzle.txt')}")
     print(f"Part 2: {part2('puzzle.txt')}")
