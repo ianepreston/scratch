@@ -30,6 +30,5 @@ def inputs_generator(infile: str) -> Generator[str, None, None]:
     stack = traceback.extract_stack()
     basepath = Path(stack[-2].filename).parent
     inpath = basepath / infile
-    with open(inpath, "r") as f:
-        for line in f.readlines():
-            yield line
+    with open(inpath) as f:
+        yield from f.readlines()
