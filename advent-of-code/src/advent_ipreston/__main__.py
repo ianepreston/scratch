@@ -24,8 +24,14 @@ def main(year: int, day: int) -> None:
     daymod = importlib.import_module(module)
 
     click.echo(f"Puzzle for {year}, day {day}")
-    click.echo(f"Part 1: {daymod.part1('puzzle.txt')}")
-    click.echo(f"Part 2: {daymod.part2('puzzle.txt')}")
+    try:
+        click.echo(f"Part 1: {daymod.part1('puzzle.txt')}")
+    except AttributeError:
+        click.echo(f"No part 1 for year {year}, day {day}")
+    try:
+        click.echo(f"Part 2: {daymod.part2('puzzle.txt')}")
+    except AttributeError:
+        click.echo(f"No part 2 for year {year}, day {day}")
 
 
 if __name__ == "__main__":
