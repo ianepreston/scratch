@@ -1,8 +1,8 @@
 # Reference
 
-## advent_ipreston
+## helpers
 
 ```{eval-rst}
-.. automodule:: advent_ipreston
+.. automodule:: advent_ipreston.helpers
    :members:
 ```

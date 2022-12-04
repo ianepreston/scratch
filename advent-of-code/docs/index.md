@@ -10,10 +10,11 @@ end-before: <!-- github-only -->
 ```{toctree}
 ---
 hidden:
-maxdepth: 1
+maxdepth: 2
 ---
 
 usage
+2022/index
 reference
 License <license>
 ```
