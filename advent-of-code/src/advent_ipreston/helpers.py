@@ -31,4 +31,5 @@ def inputs_generator(infile: str) -> Generator[str, None, None]:
     basepath = Path(stack[-2].filename).parent
     inpath = basepath / infile
     with open(inpath) as f:
-        yield from f.readlines()
+        for line in f.readlines():
+            yield line.rstrip()

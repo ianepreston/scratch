@@ -43,7 +43,7 @@ def part2(infile: str) -> int:
     top_elves: list[int] = [0, 0, 0]
     elf_cals: int = 0
     for snack in inputs_generator(infile):
-        if snack.rstrip() == "":
+        if snack == "":
             elf_cals = 0
             top_elves.sort()
         else:
