@@ -21,17 +21,20 @@ def main(year: int, day: int) -> None:
     if day is None:
         day = dt.date.today().day
     module = f"advent_ipreston.year_{year}.day{str(day).zfill(2)}.puzzle"
-    daymod = importlib.import_module(module)
+    try:
+        daymod = importlib.import_module(module)
 
-    click.echo(f"Puzzle for {year}, day {day}")
-    try:
-        click.echo(f"Part 1: {daymod.part1('puzzle.txt')}")
-    except AttributeError:
-        click.echo(f"No part 1 for year {year}, day {day}")
-    try:
-        click.echo(f"Part 2: {daymod.part2('puzzle.txt')}")
-    except AttributeError:
-        click.echo(f"No part 2 for year {year}, day {day}")
+        click.echo(f"Puzzle for {year}, day {day}")
+        try:
+            click.echo(f"Part 1: {daymod.part1('puzzle.txt')}")
+        except AttributeError:
+            click.echo(f"No part 1 for year {year}, day {day}")
+        try:
+            click.echo(f"Part 2: {daymod.part2('puzzle.txt')}")
+        except AttributeError:
+            click.echo(f"No part 2 for year {year}, day {day}")
+    except ModuleNotFoundError:
+        click.echo(f"No module for {module}")
 
 
 if __name__ == "__main__":
