@@ -37,4 +37,4 @@ def inputs_generator(infile: str) -> Generator[str, None, None]:
     inpath = basepath / infile
     with open(inpath) as f:
         for line in f.readlines():
-            yield line.rstrip()
+            yield line.replace("\n", "")
