@@ -18,8 +18,8 @@ class Instruction(NamedTuple):
 
 def split_tower_instructions(infile: str) -> tuple[list[str], list[str]]:
     """Split the puzzle input into the tower section and the instructions section."""
-    tower = []
-    instructions = []
+    tower: list[str] = []
+    instructions: list[str] = []
     target_list = tower
     for line in inputs_generator(infile):
         if line == "":
@@ -36,9 +36,11 @@ def create_tower(tower_list: list[str]) -> dict[int, list[str]]:
         i for i, character in enumerate(tower_list.pop()) if character.strip()
     )
     # Create our tower data structure with empty lists of blocks
-    tower = {i + 1: [] for i in range(len(tower_indices))}
+    tower: dict[int, list[str]] = {i + 1: [] for i in range(len(tower_indices))}
     # Map tower names to index position
-    index_to_tower = {index: i + 1 for i, index in enumerate(tower_indices)}
+    index_to_tower: dict[int, int] = {
+        index: i + 1 for i, index in enumerate(tower_indices)
+    }
     # Start building the tower
     while tower_list:
         row = tower_list.pop()
@@ -83,7 +85,9 @@ def follow_instruction_part2(
 def follow_instructions(
     tower: dict[int, list[str]],
     instructions: list[Instruction],
-    instruction_func: Callable,
+    instruction_func: Callable[
+        [dict[int, list[str]], Instruction], dict[int, list[str]]
+    ],
 ) -> dict[int, list[str]]:
     """Follow the instructions and return the updated tower."""
     for instruction in instructions:
@@ -91,7 +95,7 @@ def follow_instructions(
     return tower
 
 
-def find_top_crates(tower: dict[int, list[str]]):
+def find_top_crates(tower: dict[int, list[str]]) -> str:
     """Find the message of the top crates in a tower."""
     return "".join(tower[i + 1][-1] for i in range(len(tower)))
 

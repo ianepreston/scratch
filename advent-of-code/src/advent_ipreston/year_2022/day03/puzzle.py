@@ -46,7 +46,9 @@ def group_rucksacks(
     """Get the rucksacks in groups of three."""
     rucksack_generator = inputs_generator(infile)
     while rucksack_generator:
-        groups = tuple(set(x) for x in itertools.islice(rucksack_generator, 3))
+        groups: tuple[set[str], set[str], set[str]] = tuple(
+            set(x) for x in itertools.islice(rucksack_generator, 3)
+        )  # type: ignore
         if len(groups) == 3:
             yield groups
         else:

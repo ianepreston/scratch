@@ -1,6 +1,7 @@
 """Command-line interface."""
 import datetime as dt
 import importlib
+from typing import Optional
 
 import click
 
@@ -14,7 +15,7 @@ import click
     "-d", "--day", type=str, default=None, help="Puzzle day (default current)"
 )
 # @click.option("-p", "--part", type=str, default=None)
-def main(year: int, day: int) -> None:
+def main(year: Optional[int] = None, day: Optional[int] = None) -> None:
     """Ian's Advent of Code puzzle runner."""
     if year is None:
         year = dt.date.today().year
