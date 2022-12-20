@@ -28,4 +28,4 @@ while True:
     with autocast():
         n = random.randint(1000, 9999)
         image = pipe(prompt, guidance_scale=7.5)["images"][0]
-        image.save(f"/diffusions/{prompt}-{n}.jpeg")
+        image.save(f"diffusions/{prompt}-{n}.jpeg")
