@@ -2,5 +2,5 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
 {
   "name": "advent-devcontainer",
-  "image": "ianepreston/hypermodern-devcontainer"
+  "image": "ianepreston/python-devcontainer"
 }
