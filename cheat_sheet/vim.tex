@@ -1,0 +1,158 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cheatsheet
+% LaTeX Template
+% Version 1.0 (12/12/15)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Michael Müller (https://github.com/cmichi/latex-template-collection) with
+% extensive modifications by Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{scrartcl} % 11pt font size
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+
+\usepackage[margin=0pt, landscape]{geometry} % Page margins and orientation
+
+\usepackage{graphicx} % Required for including images
+
+\usepackage{color} % Required for color customization
+\definecolor{mygray}{gray}{.75} % Custom color
+
+\usepackage{url} % Required for the \url command to easily display URLs
+
+\usepackage[ % This block contains information used to annotate the PDF
+colorlinks=false, 
+pdftitle={Cheatsheet}, 
+pdfauthor={Ian Preston}, 
+pdfsubject={Compilation of useful shortcuts}, 
+pdfkeywords={Random Software, Cheatsheet}
+]{hyperref}
+
+\setlength{\unitlength}{1mm} % Set the length that numerical units are measured in
+\setlength{\parindent}{0pt} % Stop paragraph indentation
+
+\renewcommand{\dots}{\ \dotfill{}\ } % Fills in the right amount of dots
+
+\newcommand{\command}[2]{#1~\dotfill{}~#2\\} % Custom command for adding a shorcut
+
+\newcommand{\sectiontitle}[1]{\paragraph{#1} \ \\} % Custom command for subsection titles
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\begin{picture}(297,210) % Create a container for the page content
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION 
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%	FIRST COLUMN SPECIFICATION
+%----------------------------------------------------------------------------------------
+
+\put(10,200){ % Divide the page
+\begin{minipage}[t]{85mm} % Create a box to house text
+\sectiontitle{Vim}
+\texttt{\\Exiting\\}
+\command{:qa}{Close all files}
+\command{:qa!}{Close all files, abandon changes}
+\command{:w}{Save}
+\command{:wq or :x}{Save and close file}
+\command{:q}{Close file}
+\command{:q!}{Close file, abandon changes}
+\command{ZZ}{Save and quit}
+\command{ZQ}{Quit without saving changes}
+
+\texttt{\\Editing\\}
+\command{a}{append}
+\command{i}{insert}
+\command{C-o}{Do one normal command then back to insert}
+\command{o}{Next Line}
+\command{O}{Previous Line}
+\command{s}{Delete char and insert}
+\command{S}{Delete line and insert}
+\command{C}{Delete until end of line and insert}
+\command{r}{Replace one character}
+\command{R}{Replace mode}
+\command{u}{Undo changes}
+\command{Ctrl + R}{Redo changes}
+\command{Esc}{Command mode}
+\end{minipage} % End the first column of text
+} % End the first division of the page
+
+%----------------------------------------------------------------------------------------
+%	SECOND COLUMN SPECIFICATION 
+%----------------------------------------------------------------------------------------
+
+\put(105,200){ % Divide the page
+\begin{minipage}[t]{85mm} % Create a box to house text
+\texttt{\\Clipboard\\}
+\command{x}{Delete character}
+\command{dd}{Delete line (cut)}
+\command{yy}{Yank line (copy)}
+\command{p}{Paste}
+\command{P}{Paste before}
+
+\texttt{\\Navigating\\}
+\command{h j k l}{$\leftarrow \downarrow \uparrow \rightarrow$}
+\command{Ctrl b f}{Move back/forward one full screen}
+\command{Ctrl u d}{Move back/forward one full screen}
+\command{b/w}{Previous/next word}
+\command{e/ge}{Previous/next end of word}
+\command{0}{Start of line}
+\command{\^}{Start of line after whitespace}
+\command{\$}{End of line}
+\command{fx}{jump to next occurrence of character x}
+\command{Fx}{jump to previous occurrence of character x}
+\command{\%}{jump to matching character (think e.g close parens)}
+\command{gg}{go to first line of document}
+\command{G}{go to last line of document}
+\command{tx}{jump to before next occurrence of character x}
+\command{Tx}{jump to after previous occurrence of character x}
+\command{zz}{Center this line}
+\command{H/M/L}{Move to top/middle/bottom of screen}
+\end{minipage} % End the second column of text
+} % End the second division of the page
+
+% %----------------------------------------------------------------------------------------
+% %	THIRD COLUMN SPECIFICATION 
+% %----------------------------------------------------------------------------------------
+
+\put(200,200){ % Divide the page
+\begin{minipage}[t]{85mm} % Create a box to house tex
+\texttt{\\Operators\\}
+\command{d}{cut}
+\command{y}{copy}
+\command{c}{change (delete then insert}
+\command{>/<}{Indent right/left}
+
+\texttt{\\Navigation\\}
+\command{[/] (\{</)\}>}{previous / next bracket}
+\command{[m/M}{Previous method start / end}
+
+\texttt{\\Text objects\\}
+\command{p}{paragraph}
+\command{w}{word}
+\command{s}{sentence}
+\command{[(\{<}{block}
+\command{' " `}{quoted string}
+\command{b/B}{A block/A block in}
+\texttt{\\Definition\\}
+\command{word}{letters digits and underscores}
+\command{WORD}{Only delimited by whitespace (includes brackets)}
+\end{minipage} % End the third column of text
+} % End the third division of the page
+\end{picture}
+\end{document}

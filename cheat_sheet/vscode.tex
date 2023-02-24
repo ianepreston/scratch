@@ -1,0 +1,117 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cheatsheet
+% LaTeX Template
+% Version 1.0 (12/12/15)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Michael Müller (https://github.com/cmichi/latex-template-collection) with
+% extensive modifications by Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{scrartcl} % 11pt font size
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+
+\usepackage[margin=0pt, landscape]{geometry} % Page margins and orientation
+
+\usepackage{graphicx} % Required for including images
+
+\usepackage{color} % Required for color customization
+\definecolor{mygray}{gray}{.75} % Custom color
+
+\usepackage{url} % Required for the \url command to easily display URLs
+
+\usepackage[ % This block contains information used to annotate the PDF
+colorlinks=false, 
+pdftitle={Cheatsheet}, 
+pdfauthor={Ian Preston}, 
+pdfsubject={Compilation of useful shortcuts}, 
+pdfkeywords={Random Software, Cheatsheet}
+]{hyperref}
+
+\setlength{\unitlength}{1mm} % Set the length that numerical units are measured in
+\setlength{\parindent}{0pt} % Stop paragraph indentation
+
+\renewcommand{\dots}{\ \dotfill{}\ } % Fills in the right amount of dots
+
+\newcommand{\command}[2]{#1~\dotfill{}~#2\\} % Custom command for adding a shorcut
+
+\newcommand{\sectiontitle}[1]{\paragraph{#1} \ \\} % Custom command for subsection titles
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\begin{picture}(297,210) % Create a container for the page content
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION 
+%----------------------------------------------------------------------------------------
+\put(10,200){ % Divide the page
+\begin{minipage}[t]{85mm} % Create a box to house text
+\sectiontitle{VS Code}
+\texttt{\\General\\}			
+\command{Ctrl + shift + P, F1}{Show Command Palette}
+\command{Ctrl + P}{Quick Open, Go to File...}
+\command{Ctrl + shift + \\}{Jump to matching bracket}
+\command{Ctrl + shift + [}{Fold region}
+\command{Ctrl + shift + ]}{Unfold region}
+\command{Ctrl + shift + M}{Show Problems Panel}
+\command{F8}{Go to next error or warning}
+\command{F3 / Shift + F3}{Find Next/Previous}
+\command{Ctrl + Alt $\uparrow \downarrow$}{Insert cursor above/below}
+\command{Ctrl + U}{Undo cursor operation}
+\command{Ctrl + Space}{Trigger suggestion}
+\command{Ctrl + Shift + Space}{Trigger Parameter Hints}
+\command{Shift + Alt + F}{Format Document}
+\command{F12}{Go to definition}
+\command{Alt + F12}{Peek definition}
+\command{Ctrl + K F12}{Open Definition to the side}
+\command{Shift + F12}{Show References}
+\command{F2}{Rename symbol}
+\command{Ctrl + K P}{Copy path of active file}
+\end{minipage}}
+
+%----------------------------------------------------------------------------------------
+%	SECOND COLUMN SPECIFICATION 
+%----------------------------------------------------------------------------------------
+
+\put(105,200){ % Divide the page
+\begin{minipage}[t]{85mm} % Create a box to house text
+\texttt{\\Editor View\\}			
+\command{Ctrl + $\backslash$}{Split editor}
+\command{Ctrl + 1 / 2 /3}{Focus on nth editor group}
+\command{Ctrl + shift + PgUp / PgDn}{Move editor left/right}
+\command{F11}{Toggle full screen}
+\command{Ctrl + B}{Toggle sidebar visbility}
+\command{Ctrl + K Z}{Toggle zen mode}
+\end{minipage}}
+
+%----------------------------------------------------------------------------------------
+%	THIRD COLUMN SPECIFICATION 
+%----------------------------------------------------------------------------------------
+
+\put(200,200){ % Divide the page
+\begin{minipage}[t]{85mm} % Create a box to house tex
+\texttt{\\Debugging\\}			
+\command{F9}{Toggle breakpoint}
+\command{F5}{Start/Continue}
+\command{Shift + F5}{Stop}
+\command{F11 / Shift + F11}{Step into/out}
+\command{F10}{Step over}
+\end{minipage}}
+\end{picture}
+\end{document}
+
