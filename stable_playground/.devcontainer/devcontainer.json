@@ -1,0 +1,19 @@
+{
+	"name": "Stable diffusion dev container",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"runArgs": [
+		"--gpus",
+		"all",
+		"--env-file",
+		".devcontainer/.env"
+	],
+	"mounts": [
+		{
+			"source": "/home/ipreston/diffusions",
+			"target": "/diffusions",
+			"type": "bind"
+		}
+	]
+}
