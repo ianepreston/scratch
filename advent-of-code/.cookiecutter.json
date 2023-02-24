@@ -1,0 +1,13 @@
+{
+  "_template": "https://github.com/cjolowicz/cookiecutter-hypermodern-python",
+  "author": "Ian Preston",
+  "copyright_year": "2022",
+  "development_status": "Development Status :: 4 - Beta",
+  "email": "ianepreston@noreply.github.com",
+  "friendly_name": "Ian's Advent of Code",
+  "github_user": "ianepreston",
+  "license": "MIT",
+  "package_name": "advent_ipreston",
+  "project_name": "advent-ipreston",
+  "version": "0.0.0"
+}
