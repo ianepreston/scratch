@@ -1,0 +1,22 @@
+name: isl
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - jupyterlab
+  - nodejs
+  - pylint
+  - black
+  - pytest
+  - pandas
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - statsmodels
+  - mlxtend
+  - glmnet
+  - scipy
+  - pydot
+  - patsy
+  - rpy2
+  - tzlocal
