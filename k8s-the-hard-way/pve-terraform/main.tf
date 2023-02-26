@@ -11,28 +11,31 @@ provider "proxmox" {
   pm_api_url      = "https://pve1.local.ipreston.net:8006/api2/json"
 }
 
-resource "proxmox_vm_qemu" "test_server" {
-  count       = 1
-  name        = "test-vm-${count.index + 1}"
-  target_node = "pve1"
-  clone       = "ubuntujammytemplate"
-  agent       = 1
-  os_type     = "cloud-init"
-  cores       = 3
-  cpu         = "host"
-  memory      = 4096
-  bootdisk    = "scsi0"
-  disk {
-    slot = 0
-    # set disk size here. leave it small for testing because expanding the disk takes time.
-    size     = "10G"
-    type     = "scsi"
-    storage  = "local-zfs"
-    iothread = 1
+locals {
+  nodetypes = {
+    "controller" = 0
+    "worker"     = 3
   }
-  network {
-    model  = "virtio"
-    bridge = "vmbr0"
+  vm_attrs_list = flatten([
+    for nodetype, baseoctet in local.nodetypes : [
+      for i in range(3) : {
+        name = "${nodetype}${i}"
+        node = "${i + 1}",
+        type = "${nodetype}",
+        ip   = "192.168.85.${70 + baseoctet + i}"
+      }
+    ]
+  ])
+  vm_attrs_map = {
+    for obj in local.vm_attrs_list : "${obj.name}" => obj
   }
-  ipconfig0 = "ip=192.168.85.9${count.index + 1}/24,gw=192.168.85.1"
+
+}
+
+module "ubuntu_vm" {
+  source   = "./modules/ubuntu-vm"
+  for_each = local.vm_attrs_map
+  node     = each.value.node
+  type     = each.value.type
+  ip       = each.value.ip
 }
