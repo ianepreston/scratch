@@ -12,7 +12,7 @@ resource "proxmox_vm_qemu" "ubuntu-vm" {
   target_node            = "pve${var.node}"
   onboot                 = true
   oncreate               = true
-  clone                  = "ubuntujammytemplate"
+  clone                  = "ubuntu-jammy-template"
   full_clone             = true
   define_connection_info = false
   agent                  = 0
