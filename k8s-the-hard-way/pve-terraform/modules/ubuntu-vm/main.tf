@@ -15,7 +15,7 @@ resource "proxmox_vm_qemu" "ubuntu-vm" {
   clone                  = "ubuntu-jammy-template"
   full_clone             = true
   define_connection_info = false
-  agent                  = 0
+  agent                  = 1
   os_type                = "cloud-init"
   cores                  = 4
   cpu                    = "host"
