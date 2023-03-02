@@ -1,0 +1,10 @@
+--- 
+
+local_dir: "/workspaces/scratch/k8s-the-hard-way/workspace_ansible"
+workers:
+  - node: "ubuntu-worker-1"
+    ip: "192.168.85.73" 
+  - node: "ubuntu-worker-2"
+    ip: "192.168.85.74" 
+  - node: "ubuntu-worker-3"
+    ip: "192.168.85.75" 
