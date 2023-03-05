@@ -85,7 +85,7 @@
           -ca=ca.pem \
           -ca-key=ca-key.pem \
           -config=ca-config.json \
-          -hostname=192.168.85.70,192.168.86.71,192.168.85.72,127.0.0.1,kubernetes,kubernetes.default,kubernetes.default.svc,kubernetes.default.svc.cluster,kubernetes.svc.cluster.local \
+          -hostname=192.168.85.70,192.168.85.71,192.168.85.72,127.0.0.1,kubernetes,kubernetes.default,kubernetes.default.svc,kubernetes.default.svc.cluster,kubernetes.svc.cluster.local \
           -profile=kubernetes \
           kubernetes-csr.json | cfssljson -bare kubernetes
         chdir: "{{ local_dir }}"
