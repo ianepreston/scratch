@@ -1,0 +1,57 @@
+---
+
+- name: Download etcd
+  hosts: controllers
+  vars_files:
+    - vars.yml
+  tasks:
+    - unarchive:
+        src: https://github.com/etcd-io/etcd/releases/download/v3.4.15/etcd-v3.4.15-linux-amd64.tar.gz
+        dest: /home/ipreston
+        remote_src: yes
+
+- name: Copy etcd binaries to /usr/local/bin
+  hosts: controllers
+  become: true
+  vars_files:
+    - vars.yml
+  tasks:
+    - copy:
+        remote_src: true
+        src: /home/ipreston/etcd-v3.4.15-linux-amd64/{{ item }}
+        dest: /usr/local/bin/{{ item }}
+        mode: '0700'
+      with_items:
+        - etcd
+        - etcdctl
+
+
+- name: Configure the etcd server
+  hosts: controllers
+  become: true
+  vars_files:
+    - vars.yml
+  tasks:
+    - file:
+        path: /etc/etcd
+        state: directory
+    - file:
+        path: /var/lib/etcd
+        state: directory
+        mode: '0700'
+    - copy:
+        remote_src: true
+        src: /home/ipreston/{{ item }}
+        dest: /etc/etcd/{{ item }}
+      with_items:
+        - "ca.pem"
+        - "kubernetes-key.pem"
+        - "kubernetes.pem"
+    - template:
+        src: templates/etcd.service.j2
+        dest: /etc/systemd/system/etcd.service
+    - systemd:
+        daemon_reload: true
+        enabled: true
+        state: started
+        name: etcd
