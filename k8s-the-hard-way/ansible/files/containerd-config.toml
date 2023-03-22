@@ -1,0 +1,7 @@
+[plugins]
+  [plugins.cri.containerd]
+    snapshotter = "overlayfs"
+    [plugins.cri.containerd.default_runtime]
+      runtime_type = "io.containerd.runc.v2"
+      [plugins.cri.containerd.default_runtime.options]
+        NoPivotRoot = true

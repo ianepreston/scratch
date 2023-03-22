@@ -1,0 +1,137 @@
+---
+
+- name: Configure kube
+  hosts: localhost
+  vars_files:
+    - vars.yml
+  tasks:
+    - shell:
+        cmd: |
+            kubectl config set-cluster kubernetes-the-hard-way \
+              --certificate-authority=ca.pem \
+              --embed-certs=true \
+              --server=https://192.168.85.70:6443 \
+            --kubeconfig={{ item }}.kubeconfig && \
+            kubectl config set-credentials system:node:{{ item }} \
+              --client-certificate={{ item }}.pem \
+              --client-key={{ item }}-key.pem \
+              --embed-certs=true \
+              --kubeconfig={{ item }}.kubeconfig && \
+            kubectl config set-context default \
+              --cluster=kubernetes-the-hard-way \
+              --user=system:node:{{ item }} \
+              --kubeconfig={{ item }}.kubeconfig && \
+            kubectl config use-context default --kubeconfig={{ item }}.kubeconfig
+        chdir: "{{ local_dir }}"
+        creates: "{{ local_dir}}/{{ item }}.kubeconfig"
+      with_items:
+        - ubuntu-worker-1
+        - ubuntu-worker-2
+        - ubuntu-worker-3
+    - shell:
+        cmd: |
+            kubectl config set-cluster kubernetes-the-hard-way \
+              --certificate-authority=ca.pem \
+              --embed-certs=true \
+              --server=https://192.168.85.70:6443 \
+              --kubeconfig=kube-proxy.kubeconfig && \
+            kubectl config set-credentials system:kube-proxy \
+              --client-certificate=kube-proxy.pem \
+              --client-key=kube-proxy-key.pem \
+              --embed-certs=true \
+              --kubeconfig=kube-proxy.kubeconfig &&\
+            kubectl config set-context default \
+              --cluster=kubernetes-the-hard-way \
+              --user=system:kube-proxy \
+              --kubeconfig=kube-proxy.kubeconfig && \
+            kubectl config use-context default --kubeconfig=kube-proxy.kubeconfig
+        chdir: "{{ local_dir }}"
+        creates: "{{ local_dir}}/kube-proxy.kubeconfig"
+    - shell:
+        cmd: |
+          kubectl config set-cluster kubernetes-the-hard-way \
+            --certificate-authority=ca.pem \
+            --embed-certs=true \
+            --server=https://127.0.0.1:6443 \
+            --kubeconfig=kube-controller-manager.kubeconfig && \
+          kubectl config set-credentials system:kube-controller-manager \
+            --client-certificate=kube-controller-manager.pem \
+            --client-key=kube-controller-manager-key.pem \
+            --embed-certs=true \
+            --kubeconfig=kube-controller-manager.kubeconfig && \
+          kubectl config set-context default \
+            --cluster=kubernetes-the-hard-way \
+            --user=system:kube-controller-manager \
+            --kubeconfig=kube-controller-manager.kubeconfig && \
+          kubectl config use-context default --kubeconfig=kube-controller-manager.kubeconfig
+        chdir: "{{ local_dir }}"
+        creates: "{{ local_dir}}/kube-controller-manager.kubeconfig"
+    - shell:
+        cmd: |
+          kubectl config set-cluster kubernetes-the-hard-way \
+            --certificate-authority=ca.pem \
+            --embed-certs=true \
+            --server=https://127.0.0.1:6443 \
+            --kubeconfig=kube-scheduler.kubeconfig && \
+
+          kubectl config set-credentials system:kube-scheduler \
+            --client-certificate=kube-scheduler.pem \
+            --client-key=kube-scheduler-key.pem \
+            --embed-certs=true \
+            --kubeconfig=kube-scheduler.kubeconfig && \
+
+          kubectl config set-context default \
+            --cluster=kubernetes-the-hard-way \
+            --user=system:kube-scheduler \
+            --kubeconfig=kube-scheduler.kubeconfig && \
+
+          kubectl config use-context default --kubeconfig=kube-scheduler.kubeconfig
+        chdir: "{{ local_dir }}"
+        creates: "{{ local_dir}}/kube-scheduler.kubeconfig"
+    - shell:
+        cmd: |
+          kubectl config set-cluster kubernetes-the-hard-way \
+            --certificate-authority=ca.pem \
+            --embed-certs=true \
+            --server=https://127.0.0.1:6443 \
+            --kubeconfig=admin.kubeconfig && \
+
+          kubectl config set-credentials admin \
+            --client-certificate=admin.pem \
+            --client-key=admin-key.pem \
+            --embed-certs=true \
+            --kubeconfig=admin.kubeconfig && \
+
+          kubectl config set-context default \
+            --cluster=kubernetes-the-hard-way \
+            --user=admin \
+            --kubeconfig=admin.kubeconfig && \
+
+          kubectl config use-context default --kubeconfig=admin.kubeconfig
+        chdir: "{{ local_dir }}"
+        creates: "{{ local_dir}}/admin.kubeconfig"
+- name: Copy worker config
+  hosts: workers
+  vars_files:
+    - vars.yml
+  tasks:
+    - copy:
+        src: "{{ local_dir }}/{{ item }}"
+        dest: "/home/ipreston/{{ item }}"
+      with_items:
+        - "kube-proxy.kubeconfig"
+        - "{{ ansible_hostname }}.kubeconfig"
+
+
+- name: Copy controller config
+  hosts: controllers
+  vars_files:
+    - vars.yml
+  tasks:
+    - copy:
+        src: "{{ local_dir }}/{{ item }}"
+        dest: "/home/ipreston/{{ item }}"
+      with_items:
+        - "admin.kubeconfig"
+        - "kube-controller-manager.kubeconfig"
+        - "kube-scheduler.kubeconfig"

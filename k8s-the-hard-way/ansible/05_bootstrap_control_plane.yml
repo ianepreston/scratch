@@ -1,0 +1,72 @@
+---
+
+- name: Get controller binaries
+  hosts: controllers
+  become: true
+  vars_files:
+    - vars.yml
+  tasks:
+    - ansible.builtin.file:
+        path: /etc/kubernetes/config
+        state: "directory"
+        owner: root
+        group: root
+        mode: "0700"
+    
+    - ansible.builtin.get_url:
+        url: "https://storage.googleapis.com/kubernetes-release/release/v1.21.0/bin/linux/amd64/{{ item }}"
+        dest: "/usr/local/bin/{{ item }}"
+        mode: '0700'
+      with_items:
+        - "kube-apiserver"
+        - "kube-controller-manager"
+        - "kube-scheduler"
+        - "kubectl"
+
+- name: Configure the Kubernetes API server
+  become: true
+  hosts: controllers
+  vars_files:
+    - vars.yml
+  tasks:
+    - ansible.builtin.file:
+        path: /var/lib/kubernetes
+        state: "directory"
+        owner: root
+        group: root
+        mode: "0700"
+    - ansible.builtin.copy:
+        remote_src: true
+        src: /home/ipreston/{{ item }}
+        dest: /var/lib/kubernetes/{{ item }}
+      with_items:
+        - "ca.pem"
+        - "ca-key.pem"
+        - "kubernetes-key.pem"
+        - "kubernetes.pem"
+        - "service-account-key.pem"
+        - "service-account.pem"
+        - "encryption-config.yaml"
+        - "kube-scheduler.kubeconfig"
+        - "kube-controller-manager.kubeconfig"
+    - ansible.builtin.template:
+        src: templates/kube-apiserver.service.j2
+        dest: /etc/systemd/system/kube-apiserver.service
+    - ansible.builtin.copy:
+        src: files/kube-scheduler.yaml
+        dest: /etc/kubernetes/config/kube-scheduler.yaml
+    - ansible.builtin.copy:
+        src: files/{{ item }}
+        dest: /etc/systemd/system/{{ item }}
+      with_items:
+        - "kube-scheduler.service"
+        - "kube-controller-manager.service"
+    - ansible.builtin.systemd:
+        daemon_reload: true
+        enabled: true
+        state: started
+        name: "{{ item }}"
+      with_items:
+        - "kube-apiserver"
+        - "kube-controller-manager"
+        - "kube-scheduler"

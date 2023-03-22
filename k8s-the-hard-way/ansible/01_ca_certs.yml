@@ -1,0 +1,133 @@
+---
+
+- name: Configure and generated keys
+  hosts: localhost
+  vars_files:
+    - vars.yml
+  tasks:
+    - copy:
+        src: "files/{{ item }}"
+        dest: "{{ local_dir }}/{{ item }}"
+      with_items:
+        - "ca-config.json"
+        - "ca-csr.json"
+        - "admin-csr.json"
+        - "kube-controller-manager-csr.json"
+        - "kube-proxy-csr.json"
+        - "kube-scheduler-csr.json"
+        - "kubernetes-csr.json"
+        - "service-account-csr.json"
+    - shell: 
+        cmd: "cfssl gencert -initca ca-csr.json | cfssljson -bare ca"
+        chdir: "{{ local_dir }}"
+        creates: "{{ local_dir}}/ca-key.pem"
+    - shell:
+        cmd: |
+          cfssl gencert \
+          -ca=ca.pem \
+          -ca-key=ca-key.pem \
+          -config=ca-config.json \
+          -profile=kubernetes \
+          admin-csr.json | cfssljson -bare admin
+        chdir: "{{ local_dir }}"
+        creates: "{{ local_dir}}/admin-key.pem"
+    - template:
+        src: templates/worker-csr.json.j2
+        dest: "{{ local_dir}}/{{ item.node }}-csr.json"
+      with_items:
+        - "{{ workers }}"
+    - shell:
+        cmd: |
+          cfssl gencert \
+          -ca=ca.pem \
+          -ca-key=ca-key.pem \
+          -config=ca-config.json \
+          -hostname={{ item.node }},{{ item.ip }} \
+          -profile=kubernetes \
+          {{ item.node }}-csr.json | cfssljson -bare {{ item.node }}
+        chdir: "{{ local_dir }}"
+        creates: "{{ local_dir}}/{{ item.node }}-key.pem"
+      with_items:
+        - "{{ workers }}"
+    - shell:
+        cmd: |
+          cfssl gencert \
+          -ca=ca.pem \
+          -ca-key=ca-key.pem \
+          -config=ca-config.json \
+          -profile=kubernetes \
+          kube-controller-manager-csr.json | cfssljson -bare kube-controller-manager
+        chdir: "{{ local_dir }}"
+        creates: "{{ local_dir}}/kube-controller-manager-key.pem"
+    - shell:
+        cmd: |
+          cfssl gencert \
+          -ca=ca.pem \
+          -ca-key=ca-key.pem \
+          -config=ca-config.json \
+          -profile=kubernetes \
+          kube-proxy-csr.json | cfssljson -bare kube-proxy
+        chdir: "{{ local_dir }}"
+        creates: "{{ local_dir}}/kube-proxy-key.pem"
+    - shell:
+        cmd: |
+          cfssl gencert \
+          -ca=ca.pem \
+          -ca-key=ca-key.pem \
+          -config=ca-config.json \
+          -profile=kubernetes \
+          kube-scheduler-csr.json | cfssljson -bare kube-scheduler
+        chdir: "{{ local_dir }}"
+        creates: "{{ local_dir}}/kube-scheduler-key.pem"
+    - shell:
+        cmd: |
+          cfssl gencert \
+          -ca=ca.pem \
+          -ca-key=ca-key.pem \
+          -config=ca-config.json \
+          -hostname=192.168.85.70,192.168.85.71,192.168.85.72,127.0.0.1,kubernetes,kubernetes.default,kubernetes.default.svc,kubernetes.default.svc.cluster,kubernetes.svc.cluster.local \
+          -profile=kubernetes \
+          kubernetes-csr.json | cfssljson -bare kubernetes
+        chdir: "{{ local_dir }}"
+        creates: "{{ local_dir}}/kubernetes-key.pem"
+    - shell:
+        cmd: |
+          cfssl gencert \
+          -ca=ca.pem \
+          -ca-key=ca-key.pem \
+          -config=ca-config.json \
+          -profile=kubernetes \
+          service-account-csr.json | cfssljson -bare service-account
+        chdir: "{{ local_dir }}"
+        creates: "{{ local_dir}}/service-account-key.pem"
+
+- name: Copy worker keys
+  hosts: workers
+  vars_files:
+    - vars.yml
+  tasks:
+    - copy:
+        src: "{{ local_dir }}/{{ item }}"
+        dest: "/home/ipreston/{{ item }}"
+      with_items:
+        - "ca.pem"
+        - "{{ ansible_hostname }}-key.pem"
+        - "{{ ansible_hostname }}.pem"
+
+
+- name: Copy controller keys
+  hosts: controllers
+  vars_files:
+    - vars.yml
+  tasks:
+    - copy:
+        src: "{{ local_dir }}/{{ item }}"
+        dest: "/home/ipreston/{{ item }}"
+      with_items:
+        - "ca.pem"
+        - "ca-key.pem"
+        - "kubernetes-key.pem"
+        - "kubernetes.pem"
+        - "service-account-key.pem"
+        - "service-account.pem"
+

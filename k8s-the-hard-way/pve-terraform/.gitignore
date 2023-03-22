@@ -1,0 +1,2 @@
+.terraform/*
+pve_creds.env
