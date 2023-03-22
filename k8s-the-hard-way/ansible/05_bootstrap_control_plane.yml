@@ -48,6 +48,7 @@
         - "service-account.pem"
         - "encryption-config.yaml"
         - "kube-scheduler.kubeconfig"
+        - "kube-controller-manager.kubeconfig"
     - ansible.builtin.template:
         src: templates/kube-apiserver.service.j2
         dest: /etc/systemd/system/kube-apiserver.service
