@@ -12,6 +12,7 @@ RUN apt update && \
 
 WORKDIR /config
 COPY entrypoint.sh entrypoint.sh
+COPY format.txt format.txt
 COPY ytdlconf ytdlconf
 COPY downloads downloads
 COPY ytdlp.py ytdlp.py
