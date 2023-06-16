@@ -1,0 +1,5 @@
+{
+  "name": "terraform-devcontainer",
+  "image": "ianepreston/iac-devcontainer",
+  "remoteUser": "root"
+}
