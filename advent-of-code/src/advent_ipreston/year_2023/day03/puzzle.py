@@ -35,15 +35,18 @@ class Point:
         ]
         return set(point for point in possible if (point.x >= 0 and point.y >= 0))
 
+
 @dataclass
 class Number:
     value: int
     points: Set[Point]
 
+
 @dataclass
 class Result:
     numbers: List[Number]
     symbols: Set[Point]
+
 
 def parse_row(inrow: str, y: int, stars_only: bool = False) -> Result:
     """Parse a row."""
@@ -62,12 +65,17 @@ def parse_row(inrow: str, y: int, stars_only: bool = False) -> Result:
         elif symbol_checker(char):
             symbols.add(Point(x=x, y=y))
         if current_number and not char.isdigit():
-            numbers.append(Number(value=int("".join(current_number)), points=current_number_points))
+            numbers.append(
+                Number(value=int("".join(current_number)), points=current_number_points)
+            )
             current_number = []
             current_number_points = set()
     if current_number:
-        numbers.append(Number(value=int("".join(current_number)), points=current_number_points))
+        numbers.append(
+            Number(value=int("".join(current_number)), points=current_number_points)
+        )
     return Result(numbers=numbers, symbols=symbols)
+
 
 def parse_game(ingame: str, stars_only: bool = False) -> Result:
     """Parse a game."""
@@ -78,6 +86,7 @@ def parse_game(ingame: str, stars_only: bool = False) -> Result:
         numbers.extend(row.numbers)
         symbols.update(row.symbols)
     return Result(numbers=numbers, symbols=symbols)
+
 
 def part1(infile: str) -> int:
     """Solve part 1 of the puzzle."""
@@ -90,6 +99,7 @@ def part1(infile: str) -> int:
         if adjacents.intersection(game.symbols):
             value += number.value
     return value
+
 
 def part2(infile: str) -> int:
     """Solve part 2 of the puzzle."""

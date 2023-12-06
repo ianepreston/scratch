@@ -14,7 +14,13 @@ class ColorDraw:
 
     def is_valid(self, reference: "ColorDraw") -> bool:
         """Compare against a reference ColorDraw object to see if it is valid."""
-        return all((self.blue <= reference.blue, self.green <= reference.green, self.red <= reference.red))
+        return all(
+            (
+                self.blue <= reference.blue,
+                self.green <= reference.green,
+                self.red <= reference.red,
+            )
+        )
 
 
 REFERENCE_DRAW = ColorDraw(blue=14, green=13, red=12)
@@ -31,7 +37,7 @@ class Game:
             if not draw.is_valid(REFERENCE_DRAW):
                 return False
         return True
-    
+
     def min_cubes_power(self) -> int:
         """Return the minimum number of cubes needed to play the game."""
         min_green = max(draw.green for draw in self.draws)
@@ -65,6 +71,7 @@ def parse_game(ingame: str) -> Game:
         game.draws.append(parse_draw(indraw))
     return game
 
+
 def part1(infile: str) -> int:
     """Solve part 1 of the puzzle."""
     valid_games = 0
@@ -73,6 +80,7 @@ def part1(infile: str) -> int:
         if game.is_valid():
             valid_games += game.number
     return valid_games
+
 
 def part2(infile: str) -> int:
     """Solve part 2 of the puzzle."""

@@ -27,6 +27,7 @@ class Card:
             value = 2 ** (matches - 1)
         return value
 
+
 def parse_card(line: str) -> Card:
     cardnum, remainder = line.split(":")
     cardnum = int(cardnum.replace("Card", "").strip())
@@ -35,12 +36,14 @@ def parse_card(line: str) -> Card:
     have = set(int(i) for i in havestr.split())
     return Card(cardnum, winners, have)
 
+
 def part1(infile: str) -> int:
     """Part 1"""
     points = 0
     for line in inputs_generator(infile):
         points += parse_card(line).points
     return points
+
 
 def part2(infile: str) -> int:
     """Part 2."""
