@@ -7,6 +7,7 @@ def test_part01() -> None:
     """Test part 1."""
     assert part1("example.txt") == 35
 
+
 def test_part01solution() -> None:
     assert part1("puzzle.txt") == 31599214
 
@@ -14,4 +15,3 @@ def test_part01solution() -> None:
 def test_part02() -> None:
     """Test part 2."""
     assert part2("example.txt") == 46
-

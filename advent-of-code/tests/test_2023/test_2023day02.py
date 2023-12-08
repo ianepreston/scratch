@@ -11,4 +11,3 @@ def test_part01() -> None:
 def test_part02() -> None:
     """Test part 2."""
     assert part2("example.txt") == 2286
-
